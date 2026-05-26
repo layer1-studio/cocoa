@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>COCOA | Bespoke Event Inquiry</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3e2723",
+                        "background-light": "#f7f7f6",
+                        "background-dark": "#1c1716",
+                        "accent-gold": "#c5a059",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Noto Serif', serif;
+        }
+        .form-input-custom {
+            @apply block w-full bg-primary/10 border-0 border-b-2 border-primary/30 text-white focus:border-accent-gold focus:ring-0 transition-colors duration-300 py-3 px-4;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-white min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<!-- Header Navigation -->
+<div class="flex items-center bg-background-dark/80 backdrop-blur-md sticky top-0 z-50 p-4 border-b border-primary/20 justify-between">
+<div class="text-white flex size-10 shrink-0 items-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center font-display uppercase tracking-widest">Bespoke Events</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center rounded-lg h-10 bg-transparent text-white p-0">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Hero Section -->
+<div class="@container">
+<div class="relative w-full h-[260px] overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent z-10"></div>
+<div class="w-full h-full bg-center bg-no-repeat bg-cover" data-alt="Luxurious assorted chocolate truffles in an elegant gold-lined box" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCZBBXgV9E-Iy_TXQ3ba_akS1_GhLGEF_wk7iIbUw3yYANsU52vvRxIP61pWmsiYhq-6z3jdEniL2Etj2nCXquFBdvxQnMdrGIa20_JupDEevgBklrGZeExdytMRFB3_ytwNvpPfnc2EQ5Z4Ki2pWtcq7OCn6-sVtdXiIJPcDhP4FzprKBqy85T9fEP-_VIZmOEsYL0AMzYD4QLkdNMDhLCVE4tNLkrIhdxJi4yT2IWMfnkE24XU9Fc-XCP35PjSoHB9H6SoNE5wA");'>
+</div>
+<div class="absolute bottom-6 left-0 w-full px-6 z-20 text-center">
+<h1 class="text-3xl font-bold leading-tight mb-2 font-display text-white">Artisanal Occasions</h1>
+<p class="text-white/80 text-sm font-normal max-w-xs mx-auto">Elevate your celebration with our handcrafted boutique chocolate collections.</p>
+</div>
+</div>
+</div>
+<!-- Form Section -->
+<div class="px-6 py-8 max-w-xl mx-auto w-full">
+<div class="mb-8 border-l-2 border-accent-gold pl-4">
+<h3 class="text-xl font-display font-bold text-accent-gold">Inquiry Form</h3>
+<p class="text-xs uppercase tracking-widest text-white/50 mt-1">Curate Your Experience</p>
+</div>
+<form class="space-y-6">
+<!-- Name -->
+<div class="group">
+<label class="block text-xs font-semibold text-accent-gold uppercase tracking-wider mb-1 ml-1">Full Name</label>
+<input class="form-input-custom rounded-t-lg bg-primary/20 focus:bg-primary/40" placeholder="Alexander Sterling" type="text"/>
+</div>
+<!-- Contact Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-semibold text-accent-gold uppercase tracking-wider mb-1 ml-1">Email Address</label>
+<input class="form-input-custom bg-primary/20 focus:bg-primary/40" placeholder="alex@example.com" type="email"/>
+</div>
+<div>
+<label class="block text-xs font-semibold text-accent-gold uppercase tracking-wider mb-1 ml-1">Phone Number</label>
+<input class="form-input-custom bg-primary/20 focus:bg-primary/40" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+</div>
+<!-- Event Details Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-semibold text-accent-gold uppercase tracking-wider mb-1 ml-1">Event Type</label>
+<select class="form-input-custom bg-primary/20 focus:bg-primary/40 appearance-none">
+<option value="wedding">Wedding Celebration</option>
+<option value="corporate">Corporate Gala</option>
+<option value="private">Private Soirée</option>
+<option value="holiday">Holiday Gift</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-semibold text-accent-gold uppercase tracking-wider mb-1 ml-1">Boxes Required</label>
+<input class="form-input-custom bg-primary/20 focus:bg-primary/40" min="10" placeholder="50" type="number"/>
+</div>
+</div>
+<!-- Date Picker -->
+<div class="relative">
+<label class="block text-xs font-semibold text-accent-gold uppercase tracking-wider mb-1 ml-1">Requested Delivery Date</label>
+<div class="relative">
+<input class="form-input-custom bg-primary/20 focus:bg-primary/40 pr-10" type="date"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-accent-gold pointer-events-none">calendar_month</span>
+</div>
+</div>
+<!-- Special Instructions -->
+<div>
+<label class="block text-xs font-semibold text-accent-gold uppercase tracking-wider mb-1 ml-1">Special Instructions &amp; Custom Branding</label>
+<textarea class="form-input-custom bg-primary/20 focus:bg-primary/40 rounded-b-lg" placeholder="Share your vision, dietary preferences, or custom logo requests..." rows="4"></textarea>
+</div>
+<!-- Submit Button -->
+<div class="pt-6">
+<button class="w-full bg-primary hover:bg-primary/80 text-accent-gold border border-accent-gold/30 font-display text-lg font-bold py-4 rounded-lg shadow-2xl transition-all active:scale-[0.98] flex items-center justify-center gap-3" type="submit">
+<span class="material-symbols-outlined">send</span>
+                        Submit Inquiry
+                    </button>
+<p class="text-center text-[10px] text-white/40 uppercase tracking-[0.2em] mt-4 italic">Our concierge will contact you within 24 hours</p>
+</div>
+</form>
+</div>
+<!-- Footer Info -->
+<div class="bg-primary/10 px-6 py-12 mt-12 border-t border-primary/20">
+<div class="text-center mb-8">
+<h4 class="font-display text-xl text-accent-gold mb-2 italic underline decoration-accent-gold/30 underline-offset-8">COCOA Concierge</h4>
+<p class="text-sm text-white/60">Prefer a personal conversation?</p>
+</div>
+<div class="flex flex-col gap-4 max-w-xs mx-auto">
+<a class="flex items-center justify-center gap-3 py-3 px-4 rounded-xl bg-background-dark border border-primary/30 text-sm" href="tel:+">
+<span class="material-symbols-outlined text-accent-gold">call</span>
+                    +1 (800) COCOA-LUXE
+                </a>
+<a class="flex items-center justify-center gap-3 py-3 px-4 rounded-xl bg-background-dark border border-primary/30 text-sm" href="mailto:events@cocoa.com">
+<span class="material-symbols-outlined text-accent-gold">mail</span>
+                    events@cocoa.com
+                </a>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="sticky bottom-0 z-50 flex gap-2 border-t border-primary/30 bg-background-dark px-4 pb-6 pt-3">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-white/50" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<p class="text-[10px] font-medium leading-normal tracking-widest uppercase">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-white/50" href="#">
+<span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+<p class="text-[10px] font-medium leading-normal tracking-widest uppercase">Shop</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-accent-gold" href="#">
+<span class="material-symbols-outlined text-[24px] fill-1">calendar_add_on</span>
+<p class="text-[10px] font-medium leading-normal tracking-widest uppercase">Events</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-white/50" href="#">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<p class="text-[10px] font-medium leading-normal tracking-widest uppercase">Profile</p>
+</a>
+</div>
+</div>
+</body></html>

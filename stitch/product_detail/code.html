@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Detail - Cocoa Luxe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3e2723",
+                        "accent-gold": "#D4AF37",
+                        "background-light": "#f7f7f6",
+                        "background-dark": "#1c1716",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Noto Serif", serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-white font-display">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-50 flex items-center bg-background-dark/95 backdrop-blur-md p-4 justify-between border-b border-primary/30">
+<div class="text-white flex size-10 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center">Boutique Cocoa</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="text-white flex items-center justify-center">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</header>
+<main class="max-w-md mx-auto pb-32">
+<!-- Hero Product Gallery -->
+<div class="relative w-full overflow-hidden">
+<div class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar">
+<div class="flex-none w-full snap-center px-4 pt-4">
+<div class="w-full aspect-square bg-center bg-cover rounded-xl shadow-2xl border border-primary/20" data-alt="Macro shot of dark chocolate truffles" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzRdHNKJdMlDdJR0-YEwR5etu9TCpdm6VKUMgechC6hxrA4XQYVwxRAF9prM7zyty9BFNHt8QiqWuf3idQfvYwVqCfq8fP_3vZI1X2bwZBMYgtaN_8GU4ulWDn8mKxQv7G7Uy1Q-3-5-XY3KNcjKs6vSpWgxeiE5gIXTMSARsgGEZUUPW7ocnGTF2hx6r4wHIXNNNuTFaiQ98p3EmxxEygIYFfTzJgFCXBjI_CtBAvL-pv6xmLU5WWxPw4WyqPRlu49bm35xa_Sw");'>
+</div>
+</div>
+<div class="flex-none w-full snap-center px-4 pt-4">
+<div class="w-full aspect-square bg-center bg-cover rounded-xl shadow-2xl border border-primary/20" data-alt="Gourmet chocolate box selection luxury" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBQQZHfqXyMQ-gFCpOw2Xz9NCEvWnp7hCNJGHDtSEmALoEyF7am8NKDh2rh_Yw-jcze-SC8xyHPMU2bn35mR2xUOtDvzDMOaAckGfp25lmURqQFtVY3__1nw7bNrAsmziDe8bAE0cGB1w6QAUHLrVuW3atniqoouD2jk7RGmSYTUX3Ix2xfQD8MHeck4tkAb9MdErD9u3qUmRfDuectJJsnwTw_CmJp-nPyPfkiu2yw9T-b4zzTpBpBegWohnlBdKqyx8DbFZZ6Bw");'>
+</div>
+</div>
+<div class="flex-none w-full snap-center px-4 pt-4">
+<div class="w-full aspect-square bg-center bg-cover rounded-xl shadow-2xl border border-primary/20" data-alt="Single origin cocoa beans and bars" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBO11mnzAOwpJcLw_25j9RDgs0q64zeZnhNejIzTfVn-lPAYH3bUjoanmGs0a5LL0KRyVwvBInnfhyDfogx6hqXv_5rZRGATWy4QCSDp1HwjbyPGnwpj0zsQiwo6efTGlQiik-i6qDrntvMS6k-BhatdhOQrZ1kK25EgadoiZOSu1814gkmNh-KszEMb_hF0W28qVh7XjaKvM4TzuhEvV3vVPNN0Y9q1KNelbcaMBTj3qw4aTP-EW4HLYD34L1EjdpzQBFcClDlRA");'>
+</div>
+</div>
+</div>
+<!-- Pagination Dots -->
+<div class="flex justify-center gap-1.5 mt-4">
+<div class="w-6 h-1 rounded-full bg-accent-gold"></div>
+<div class="w-1.5 h-1 rounded-full bg-primary/40"></div>
+<div class="w-1.5 h-1 rounded-full bg-primary/40"></div>
+</div>
+</div>
+<!-- Product Details -->
+<section class="px-6 py-6">
+<div class="flex justify-between items-start mb-2">
+<h1 class="text-3xl font-bold leading-tight text-white flex-1">Single Origin Madagascar Dark Ganache</h1>
+<span class="text-2xl font-bold text-accent-gold ml-4">$45.00</span>
+</div>
+<div class="flex items-center gap-1 mb-4 text-accent-gold">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star_half</span>
+<span class="text-xs text-white/60 ml-1 font-sans">(48 Reviews)</span>
+</div>
+<p class="text-white/80 text-base leading-relaxed font-sans mb-6">
+                A sophisticated blend with notes of red fruit and toasted oak, crafted from the finest Madagascar cocoa beans. Each piece is hand-tempered to ensure a flawless snap and velvet-smooth melt.
+            </p>
+<!-- Customization Accordions -->
+<div class="space-y-4">
+<details class="group border-b border-primary/30 pb-4" open="">
+<summary class="flex justify-between items-center cursor-pointer list-none font-bold text-lg uppercase tracking-wider">
+                        Description
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-3 text-white/70 font-sans leading-relaxed">
+                        Hand-selected single-origin 72% dark chocolate shell. Filled with a signature water-based ganache for pure flavor expression. No artificial preservatives.
+                    </div>
+</details>
+<details class="group border-b border-primary/30 pb-4">
+<summary class="flex justify-between items-center cursor-pointer list-none font-bold text-lg uppercase tracking-wider">
+                        Ingredients
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-3 text-white/70 font-sans leading-relaxed">
+                        Cocoa mass, cane sugar, cocoa butter, Madagascar vanilla beans, sunflower lecithin. 
+                        <br/><br/>
+<span class="text-accent-gold/80 italic text-sm">Allergy Warning: May contain traces of tree nuts and dairy.</span>
+</div>
+</details>
+</div>
+</section>
+<!-- Configuration Section -->
+<section class="px-6 space-y-8">
+<!-- Quantity & Message -->
+<div class="grid grid-cols-1 gap-6">
+<div>
+<label class="block text-sm font-bold uppercase tracking-widest text-white/50 mb-3">Quantity</label>
+<div class="flex items-center w-32 border border-primary rounded-lg overflow-hidden bg-primary/10">
+<button class="flex-1 py-3 text-accent-gold hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<span class="flex-1 text-center font-bold">1</span>
+<button class="flex-1 py-3 text-accent-gold hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<div>
+<label class="block text-sm font-bold uppercase tracking-widest text-white/50 mb-3">Personalized Message (Optional)</label>
+<textarea class="w-full bg-primary/10 border border-primary/40 rounded-lg p-4 text-white font-sans focus:border-accent-gold focus:ring-1 focus:ring-accent-gold outline-none transition-all placeholder:text-white/20" placeholder="Add a handwritten note for your gift..." rows="3"></textarea>
+</div>
+</div>
+<!-- Delivery Details -->
+<div class="space-y-6">
+<h3 class="text-xl font-bold border-l-2 border-accent-gold pl-3">Delivery Preferences</h3>
+<div class="bg-primary/5 p-4 rounded-xl border border-primary/20">
+<label class="block text-sm font-bold uppercase tracking-widest text-white/50 mb-4">Select Date</label>
+<!-- Mini Calendar UI -->
+<div class="grid grid-cols-7 gap-2 text-center text-xs mb-2 text-white/40 font-sans uppercase">
+<div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div><div>Su</div>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center font-sans">
+<!-- Grayed out past/today/tomorrow (min 2 days) -->
+<div class="py-2 text-white/20">14</div>
+<div class="py-2 text-white/20">15</div>
+<div class="py-2 text-white/20">16</div>
+<div class="py-2 text-white/20 line-through">17</div>
+<div class="py-2 text-white/20 line-through">18</div>
+<!-- Available dates -->
+<div class="py-2 rounded-lg bg-accent-gold text-primary font-bold shadow-lg shadow-accent-gold/20">19</div>
+<div class="py-2 rounded-lg border border-primary/40 text-white">20</div>
+<div class="py-2 rounded-lg border border-primary/40 text-white">21</div>
+<div class="py-2 rounded-lg border border-primary/40 text-white">22</div>
+<div class="py-2 rounded-lg border border-primary/40 text-white">23</div>
+<div class="py-2 rounded-lg border border-primary/40 text-white">24</div>
+<div class="py-2 rounded-lg border border-primary/40 text-white">25</div>
+</div>
+<p class="mt-4 text-[11px] font-sans text-accent-gold/70 italic flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">info</span>
+                        Earliest delivery available: Friday, Oct 19th
+                    </p>
+</div>
+<div>
+<label class="block text-sm font-bold uppercase tracking-widest text-white/50 mb-3">Time Slot</label>
+<div class="relative">
+<select class="w-full bg-primary/10 border border-primary/40 rounded-lg p-4 text-white font-sans appearance-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold outline-none">
+<option>Morning (09:00 - 12:00)</option>
+<option>Afternoon (13:00 - 17:00)</option>
+<option>Evening (18:00 - 21:00)</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/40">expand_more</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Sticky Bottom CTA -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-background-dark/80 backdrop-blur-xl border-t border-primary/30 z-[60]">
+<div class="max-w-md mx-auto">
+<button class="w-full bg-accent-gold hover:bg-yellow-600 text-primary font-bold py-4 rounded-xl transition-all shadow-xl shadow-accent-gold/10 flex items-center justify-center gap-2 group uppercase tracking-widest text-sm">
+                Add to Cart
+                <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">shopping_bag</span>
+</button>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luxury Chocolatier | Bulk &amp; Event Orders</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#3e2723",
+                "background-light": "#f7f7f6",
+                "background-dark": "#1c1716",
+                "gold": "#c5a059",
+              },
+              fontFamily: {
+                "display": ["Noto Serif", "serif"],
+                "sans": ["Noto Sans", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        h1, h2, h3, .font-display {
+            font-family: 'Noto Serif', serif;
+        }
+        .custom-gradient {
+            background: linear-gradient(180deg, rgba(28, 23, 22, 0) 0%, rgba(28, 23, 22, 0.9) 100%);
+        }
+        .input-focus:focus {
+            border-color: #c5a059 !important;
+            ring-color: #c5a059 !important;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-stone-800 dark:text-stone-200 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 border-b border-stone-200 dark:border-stone-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+<button class="p-2 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-xl font-bold tracking-widest uppercase text-primary dark:text-gold">Luxe Chocolatier</h1>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-colors">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative h-[40vh] min-h-[300px] w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Exquisite assortment of dark gourmet chocolate truffles" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB8yMzu1lke4X5ANSOGg0n_yGl4161IV3f90FO543mDv2pNanGQkGTSSWTUPpi9HdnMpyCBiwB6HjxwaVQZd-GMG-JkHCXA3T0cgiG2vbQhMR2XpqMIwS20HSlEtasSTgdYMh9lyu9QFEeYXxGaGayJrOFLubIcoupN75-9SCE9Dkxpw8RxtzvmQRA-hg596GiPp6oxpQjVlrLsnVI0yTJfQ8U9Pno3Yeva7TO6c1q585w9xuWnJ8NMwvTVJbowfgbVm0n-vxDmrQ')">
+</div>
+<div class="absolute inset-0 custom-gradient flex flex-col justify-end p-6 md:p-12">
+<div class="max-w-4xl mx-auto w-full">
+<span class="text-gold uppercase tracking-[0.3em] text-sm font-bold mb-2 block">Bespoke Collections</span>
+<h2 class="text-white text-4xl md:text-6xl font-display mb-4">Elevate Your Occasion</h2>
+<p class="text-stone-300 max-w-xl text-lg font-light leading-relaxed">
+                        Discover our signature artisanal collections tailored for weddings, corporate gifting, and gala events.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Form Section -->
+<section class="max-w-3xl mx-auto px-4 py-12 md:py-20">
+<div class="text-center mb-12">
+<h3 class="text-2xl md:text-3xl font-display text-primary dark:text-stone-100 mb-4">Inquiry for Bulk &amp; Event Orders</h3>
+<p class="text-stone-600 dark:text-stone-400">Please provide your details below. Our concierge team will reach out within 24 hours to begin your personalized consultation.</p>
+</div>
+<form class="space-y-8 bg-white dark:bg-primary/10 p-6 md:p-10 rounded-xl border border-stone-200 dark:border-stone-800 shadow-xl">
+<!-- Personal Info -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block text-sm font-medium text-stone-500 dark:text-stone-400 uppercase tracking-wider">Full Name</label>
+<input class="w-full bg-transparent border-stone-300 dark:border-stone-700 rounded-lg py-3 px-4 focus:ring-1 focus:ring-gold focus:border-gold dark:text-white transition-all outline-none" placeholder="Alex Sterling" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-medium text-stone-500 dark:text-stone-400 uppercase tracking-wider">Phone Number</label>
+<input class="w-full bg-transparent border-stone-300 dark:border-stone-700 rounded-lg py-3 px-4 focus:ring-1 focus:ring-gold focus:border-gold dark:text-white transition-all outline-none" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="block text-sm font-medium text-stone-500 dark:text-stone-400 uppercase tracking-wider">Email Address</label>
+<input class="w-full bg-transparent border-stone-300 dark:border-stone-700 rounded-lg py-3 px-4 focus:ring-1 focus:ring-gold focus:border-gold dark:text-white transition-all outline-none" placeholder="alex@example.com" type="email"/>
+</div>
+</div>
+<!-- Event Details -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-stone-200 dark:border-stone-800">
+<div class="space-y-2">
+<label class="block text-sm font-medium text-stone-500 dark:text-stone-400 uppercase tracking-wider">Event Type</label>
+<select class="w-full bg-white dark:bg-[#1c1716] border-stone-300 dark:border-stone-700 rounded-lg py-3 px-4 focus:ring-1 focus:ring-gold focus:border-gold dark:text-white transition-all outline-none">
+<option>Corporate Gifting</option>
+<option>Wedding Celebration</option>
+<option>Gala / Fundraiser</option>
+<option>Private Party</option>
+<option>Holiday Gifting</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-medium text-stone-500 dark:text-stone-400 uppercase tracking-wider">Event Date</label>
+<input class="w-full bg-transparent border-stone-300 dark:border-stone-700 rounded-lg py-3 px-4 focus:ring-1 focus:ring-gold focus:border-gold dark:text-white transition-all outline-none" type="date"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-medium text-stone-500 dark:text-stone-400 uppercase tracking-wider">Boxes Needed (Est.)</label>
+<input class="w-full bg-transparent border-stone-300 dark:border-stone-700 rounded-lg py-3 px-4 focus:ring-1 focus:ring-gold focus:border-gold dark:text-white transition-all outline-none" min="20" placeholder="50" type="number"/>
+</div>
+</div>
+<!-- Instructions -->
+<div class="space-y-2 pt-4 border-t border-stone-200 dark:border-stone-800">
+<label class="block text-sm font-medium text-stone-500 dark:text-stone-400 uppercase tracking-wider">Special Instructions</label>
+<textarea class="w-full bg-transparent border-stone-300 dark:border-stone-700 rounded-lg py-3 px-4 focus:ring-1 focus:ring-gold focus:border-gold dark:text-white transition-all outline-none resize-none" placeholder="Tell us about your brand colors, dietary preferences, or packaging requirements..." rows="4"></textarea>
+</div>
+<!-- CTA -->
+<div class="pt-6">
+<button class="w-full bg-primary hover:bg-stone-900 text-white font-display text-lg py-4 rounded-lg shadow-lg transition-all flex items-center justify-center gap-3 active:scale-[0.98]" type="submit">
+                        Request a Personalized Quote
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<p class="text-center text-xs text-stone-500 mt-4 italic">Minimum order for bulk pricing starts at 20 units.</p>
+</div>
+</form>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 border-t border-stone-200 dark:border-stone-900 pt-12 pb-24">
+<div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+<div>
+<h4 class="text-primary dark:text-gold font-bold tracking-widest uppercase mb-4">Luxe Chocolatier</h4>
+<p class="text-sm text-stone-500 leading-relaxed">Crafting the world's finest chocolates since 1924. Every piece is a masterpiece of taste and design.</p>
+</div>
+<div>
+<h4 class="text-stone-800 dark:text-stone-200 font-bold text-sm uppercase mb-4 tracking-wider">Experience</h4>
+<ul class="space-y-2 text-sm text-stone-500">
+<li><a class="hover:text-gold transition-colors" href="#">Private Tastings</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Our Process</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">The Collection</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-stone-800 dark:text-stone-200 font-bold text-sm uppercase mb-4 tracking-wider">Connect</h4>
+<div class="flex justify-center md:justify-start gap-4">
+<a class="text-stone-500 hover:text-gold transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-stone-500 hover:text-gold transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-stone-500 hover:text-gold transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-stone-200 dark:border-stone-900 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-stone-500">© 2024 LUXE CHOCOLATIER. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-6 text-xs text-stone-500 uppercase tracking-widest">
+<a class="hover:text-stone-800 dark:hover:text-stone-200" href="#">Privacy</a>
+<a class="hover:text-stone-800 dark:hover:text-stone-200" href="#">Terms</a>
+</div>
+</div>
+</footer>
+<!-- Bottom Nav Bar (Mobile) -->
+<div class="fixed bottom-0 left-0 right-0 z-50 md:hidden flex border-t border-stone-200 dark:border-stone-800 bg-white dark:bg-[#1c1716] px-4 pb-6 pt-3 shadow-[0_-4px_10px_rgba(0,0,0,0.1)]">
+<a class="flex flex-1 flex-col items-center gap-1 text-stone-400" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<p class="text-[10px] font-medium uppercase tracking-tighter">Shop</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-primary dark:text-gold" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">calendar_today</span>
+<p class="text-[10px] font-medium uppercase tracking-tighter">Events</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-stone-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium uppercase tracking-tighter">Account</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-stone-400" href="#">
+<span class="material-symbols-outlined">search</span>
+<p class="text-[10px] font-medium uppercase tracking-tighter">Search</p>
+</a>
+</div>
+</body></html>

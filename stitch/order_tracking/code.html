@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>COCOA | Track Your Order</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3e2723",
+                        "background-light": "#f7f7f6",
+                        "background-dark": "#1c1716",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .timeline-line {
+            width: 2px;
+            background: linear-gradient(to bottom, #3e2723 50%, #332e2e 50%);
+            background-size: 100% 200%;
+            background-position: bottom;
+        }
+        .timeline-active {
+            background-position: top;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-stone-800 dark:text-stone-200 antialiased">
+<div class="relative flex h-auto min-h-screen w-full max-w-[480px] mx-auto flex-col bg-background-light dark:bg-background-dark shadow-2xl overflow-x-hidden border-x border-stone-200 dark:border-stone-800">
+<!-- Header -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-stone-200 dark:border-stone-800/50 backdrop-blur-md">
+<div class="text-primary dark:text-stone-200 flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-primary dark:text-white text-lg font-display font-bold leading-tight tracking-tight flex-1 text-center pr-10 uppercase tracking-widest">Cocoa Tracking</h2>
+</div>
+<!-- Order Lookup (Conditional State) -->
+<div class="flex flex-col gap-4 px-4 py-6">
+<label class="flex flex-col w-full">
+<p class="text-stone-600 dark:text-stone-400 text-sm font-medium leading-normal pb-2 px-1">Track another order</p>
+<div class="flex w-full items-stretch rounded-xl overflow-hidden shadow-sm">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-xl text-stone-800 dark:text-white focus:outline-0 focus:ring-0 border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#23201f] focus:border-primary h-14 placeholder:text-stone-400 dark:placeholder:text-stone-600 p-4 text-base font-normal" placeholder="e.g. #COCOA-88231" value="#COCOA-88231"/>
+<button class="bg-primary text-white flex items-center justify-center px-6 rounded-r-xl transition-opacity hover:opacity-90">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</label>
+</div>
+<!-- Order Summary Card -->
+<div class="px-4 pb-6">
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-[#23201f] p-5 shadow-sm border border-stone-100 dark:border-stone-800/50">
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-col gap-1">
+<span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary dark:text-stone-300 w-fit mb-1">
+                            Arriving in 18 mins
+                        </span>
+<p class="text-stone-900 dark:text-white text-xl font-display font-bold">Artisanal Dark Bundle</p>
+<p class="text-stone-500 dark:text-stone-400 text-sm font-normal">Order #COCOA-88231 • $42.00</p>
+</div>
+<div class="w-20 h-20 bg-center bg-no-repeat bg-cover rounded-lg shadow-inner" data-alt="Selection of dark artisanal chocolate bars" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBV-1h9XUqBjG8MwAnK7xE-phjOkziKBvTodfJl7Hj7HCyumIl1KhZ9zEEbjCjiHUS_17EIWK9ZMekiLgbDoxxDZJXk8I-tA3x-hEmfQI2ZmqgrxS7pia6jPBg9Xtk0Te9t6VH0yw5hjq7T4FGR-5PzSDgP4b6_2R6n2Qb13f-Hu4wkFM78H1qS3nSqg0D6usEibU2MJXlHmTSk9CowjLreoJPdii7ShOcfKnYtT4Kz2-qadAMj3NcW_ZymIsyVqKMkqI80pTgj3A");'></div>
+</div>
+<div class="pt-3 border-t border-stone-100 dark:border-stone-800 flex justify-between items-center">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#23201f] bg-stone-200" data-alt="Delivery driver profile photo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxoDwEV2sddGOoqQGJs89XJwqKvx-YxHf6jDHnYchzuHTjjAKhM9JIo2gv94V2XMELszfWdnO7ywqIGa0bza88ki_cLMccCC5Xmwte8McCFhrboEqigSDDYUuHneNG-r-nwDvnMFnQdqVOk5KAI746C5kAl0_fQmWztW9GpLnK5X0dNeQmDOUnICj-Z9PSU2CykSZ_oTBDse5E3SQfqy-p3BKB1b1zjAF4VSXSpeAv1ovMDKwHaIkp5lgX1bR4S_xM6CnJ6v7Diw')"></div>
+<div class="flex items-center pl-4">
+<p class="text-xs font-medium text-stone-600 dark:text-stone-400">Marco is your courier</p>
+</div>
+</div>
+<button class="text-primary dark:text-stone-300 flex items-center gap-1 text-sm font-semibold">
+<span class="material-symbols-outlined text-sm">call</span>
+                        Call
+                    </button>
+</div>
+</div>
+</div>
+<!-- Tracking Timeline -->
+<div class="flex-1 px-6 py-4 bg-stone-50/50 dark:bg-stone-900/20 rounded-t-[2.5rem]">
+<h3 class="text-stone-900 dark:text-white text-lg font-display font-bold leading-tight pb-8 pt-2">Journey to your doorstep</h3>
+<div class="relative flex flex-col gap-10">
+<!-- Timeline Step 1: Done -->
+<div class="flex gap-4 relative">
+<div class="absolute left-4 top-10 h-10 w-0.5 bg-primary"></div>
+<div class="z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-lg">check</span>
+</div>
+<div class="flex flex-col gap-1 pt-1">
+<p class="text-stone-900 dark:text-white text-base font-bold font-display">Order Received</p>
+<p class="text-stone-500 dark:text-stone-400 text-sm">11:45 AM • We've started processing your cocoa.</p>
+</div>
+</div>
+<!-- Timeline Step 2: Done -->
+<div class="flex gap-4 relative">
+<div class="absolute left-4 top-10 h-10 w-0.5 bg-primary"></div>
+<div class="z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-lg">skillet</span>
+</div>
+<div class="flex flex-col gap-1 pt-1">
+<p class="text-stone-900 dark:text-white text-base font-bold font-display">Preparing</p>
+<p class="text-stone-500 dark:text-stone-400 text-sm">12:10 PM • Your cocoa is being whisked to perfection.</p>
+</div>
+</div>
+<!-- Timeline Step 3: Current -->
+<div class="flex gap-4 relative">
+<div class="absolute left-4 top-10 h-10 w-0.5 bg-stone-200 dark:bg-stone-800"></div>
+<div class="z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-white ring-4 ring-primary/20 animate-pulse">
+<span class="material-symbols-outlined text-lg">moped</span>
+</div>
+<div class="flex flex-col gap-1 pt-1">
+<p class="text-stone-900 dark:text-white text-base font-bold font-display">Out for Delivery</p>
+<p class="text-stone-800 dark:text-stone-200 text-sm font-medium">12:35 PM • Marco is on his way to you.</p>
+</div>
+</div>
+<!-- Timeline Step 4: Pending -->
+<div class="flex gap-4 relative">
+<div class="z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-stone-100 dark:bg-stone-800 text-stone-400 dark:text-stone-600">
+<span class="material-symbols-outlined text-lg">featured_seasonal_and_gifts</span>
+</div>
+<div class="flex flex-col gap-1 pt-1 opacity-50">
+<p class="text-stone-900 dark:text-white text-base font-bold font-display">Delivered</p>
+<p class="text-stone-500 dark:text-stone-400 text-sm">Estimated 12:55 PM</p>
+</div>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="mt-10 mb-6 rounded-2xl overflow-hidden h-40 bg-stone-200 dark:bg-stone-800 relative shadow-inner">
+<div class="absolute inset-0 grayscale contrast-125 opacity-40 mix-blend-multiply" data-alt="Map of delivery route in city" data-location="Zurich, Switzerland" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdiccP66GlQEW3TC4PMIk5lUx3z3Cf0can7sa09wQr6FAxdu0lMovw8GIpNLiuTuUJLcpRLXfnkJMoIZq8Iic6oQdeEki8tiZPYSL5El78ivc1PVDHSNnc_gezBOHjYibvH6UhPoZ_DIQLSVDgwTrrsrXbmducm8tK2zr4rR0OYkiFa40CL7XpCsI2cLS4owvpDXk2m9ecJdFKQn8lPg7yrt5ZjvK5nvS1fga_vuKfwGW4cwzt6yCeGaPKN1N5Y6IZHBn2fHpieg'); background-size: cover;"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-primary p-2 rounded-full text-white shadow-xl">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+</div>
+<div class="absolute bottom-3 left-3 bg-white/90 dark:bg-stone-900/90 backdrop-blur px-3 py-1 rounded-full border border-stone-200 dark:border-stone-800 shadow-sm">
+<p class="text-[10px] uppercase tracking-widest font-bold text-stone-500 dark:text-stone-400">Live Location</p>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation -->
+<div class="mt-auto flex gap-2 border-t border-stone-200 dark:border-stone-800 bg-white/80 dark:bg-[#1c1716]/80 backdrop-blur-lg px-4 pb-8 pt-3 sticky bottom-0">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-stone-400 dark:text-stone-600 transition-colors hover:text-primary dark:hover:text-stone-300" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Shop</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary dark:text-white" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">package_2</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Orders</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-stone-400 dark:text-stone-600 transition-colors hover:text-primary dark:hover:text-stone-300" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Saved</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-stone-400 dark:text-stone-600 transition-colors hover:text-primary dark:hover:text-stone-300" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Profile</p>
+</a>
+</div>
+</div>
+</body></html>

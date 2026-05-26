@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Order Tracking | Luxury Chocolates</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#3e2723",
+              "background-light": "#f7f7f6",
+              "background-dark": "#1c1716",
+              "accent-gold": "#c5a059",
+            },
+            fontFamily: {
+              "display": ["Noto Serif", "serif"],
+              "sans": ["Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        h1, h2, h3, .font-display {
+            font-family: 'Noto Serif', serif;
+        }
+        .timeline-line {
+            width: 2px;
+            background: linear-gradient(to bottom, #3e2723 0%, #3e2723 50%, #332e2e 50%, #332e2e 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col">
+<!-- Header Navigation -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 border-b border-primary/10 dark:border-white/5 sticky top-0 z-50">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 cursor-pointer">
+<span class="material-symbols-outlined text-primary dark:text-accent-gold">arrow_back</span>
+</div>
+<h2 class="text-primary dark:text-accent-gold text-lg font-bold leading-tight tracking-tight flex-1 text-center font-display uppercase tracking-widest">
+            Artisan Tracking
+        </h2>
+<div class="flex size-10 items-center justify-end">
+<span class="material-symbols-outlined text-primary dark:text-accent-gold">shopping_bag</span>
+</div>
+</header>
+<main class="flex-1 max-w-2xl mx-auto w-full pb-24">
+<!-- Hero Section -->
+<div class="px-6 py-8 text-center">
+<h1 class="text-3xl font-bold text-primary dark:text-white mb-2">Follow Your Indulgence</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm italic">Crafting moments of pure cocoa bliss</p>
+</div>
+<!-- Search Bar -->
+<div class="px-6 mb-8">
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-primary/40 dark:text-white/40">search</span>
+</div>
+<input class="block w-full pl-12 pr-32 py-4 bg-white dark:bg-[#23201f] border border-primary/10 dark:border-white/5 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent text-sm placeholder:text-slate-400 dark:placeholder:text-slate-500 transition-all" placeholder="Enter Order Number (e.g. LC-99283)" type="text" value="LC-99283"/>
+<div class="absolute inset-y-2 right-2">
+<button class="h-full px-6 bg-primary text-white text-xs font-bold uppercase tracking-widest rounded-lg hover:bg-primary/90 transition-colors">
+                        Track
+                    </button>
+</div>
+</div>
+</div>
+<!-- Current Status Card -->
+<div class="px-6 mb-8">
+<div class="bg-white dark:bg-[#23201f] rounded-xl p-5 shadow-sm border border-primary/5 dark:border-white/5 flex flex-col md:flex-row gap-6">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-3">
+<span class="inline-block w-2 h-2 rounded-full bg-accent-gold animate-pulse"></span>
+<span class="text-accent-gold text-xs font-bold uppercase tracking-widest">In Progress</span>
+</div>
+<h3 class="text-xl font-bold mb-1 text-primary dark:text-white">Hand-crafting your selection</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Estimated Delivery: Today by 6:00 PM</p>
+<div class="flex flex-wrap gap-2">
+<button class="bg-primary/10 dark:bg-white/5 text-primary dark:text-white px-4 py-2 rounded-lg text-xs font-bold transition-colors hover:bg-primary/20">
+                            View Receipt
+                        </button>
+<button class="bg-primary/10 dark:bg-white/5 text-primary dark:text-white px-4 py-2 rounded-lg text-xs font-bold transition-colors hover:bg-primary/20">
+                            Contact Concierge
+                        </button>
+</div>
+</div>
+<div class="w-full md:w-32 aspect-square rounded-lg bg-cover bg-center overflow-hidden border border-primary/10" data-alt="Luxury dark chocolate truffles in a gold-lined box" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBuqsgh-tqu7_lf53G4WTKpk4X-4rlUfzrZFPRAW3mqQ9qxDsTRo78ClOrk2HpsxNmO1PoFQIIYsk6jdswuoO4bu3SlcGl0yzE51SR7FmPbu6LODeFdx-_tzBLRicWtLVcru5lwP-CwbawuN9yo0p4umo5kELTbBHzyvl8klNDqPyyhxrVaeIrffEKfs0l2cqvTQl5-V_EYlYlxS6RK3y6etHGKwM6wZ9T5YSM1xEVldMZj27QMDNRKA3eFscp7Kqbsa9NmdGCBCQ');">
+</div>
+</div>
+</div>
+<!-- Timeline Section -->
+<div class="px-8 space-y-0 relative">
+<h3 class="text-xs font-bold uppercase tracking-[0.2em] text-primary/40 dark:text-white/40 mb-8">Delivery Journey</h3>
+<!-- Step 1 -->
+<div class="flex gap-6 pb-10 relative">
+<div class="absolute left-[19px] top-10 bottom-0 w-[2px] bg-primary"></div>
+<div class="z-10 flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-white ring-8 ring-background-light dark:ring-background-dark">
+<span class="material-symbols-outlined text-xl">inventory_2</span>
+</div>
+<div class="pt-1">
+<p class="text-sm font-bold text-primary dark:text-white">Order Received</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Sept 12, 09:15 AM — Our boutique has confirmed your request.</p>
+</div>
+</div>
+<!-- Step 2 (Active) -->
+<div class="flex gap-6 pb-10 relative">
+<div class="absolute left-[19px] top-10 bottom-0 w-[2px] bg-slate-200 dark:bg-white/10"></div>
+<div class="z-10 flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-white ring-8 ring-background-light dark:ring-background-dark">
+<span class="material-symbols-outlined text-xl">skillet</span>
+</div>
+<div class="pt-1">
+<div class="flex items-center gap-2">
+<p class="text-sm font-bold text-primary dark:text-white">Preparing Selection</p>
+<span class="px-2 py-0.5 rounded-full bg-accent-gold/20 text-accent-gold text-[10px] font-bold uppercase">Current</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Sept 12, 11:30 AM — Our master chocolatier is hand-packing your truffles.</p>
+</div>
+</div>
+<!-- Step 3 (Pending) -->
+<div class="flex gap-6 pb-10 relative opacity-40">
+<div class="absolute left-[19px] top-10 bottom-0 w-[2px] bg-slate-200 dark:bg-white/10"></div>
+<div class="z-10 flex size-10 shrink-0 items-center justify-center rounded-full bg-slate-200 dark:bg-[#332e2e] text-slate-500 dark:text-slate-400 ring-8 ring-background-light dark:ring-background-dark">
+<span class="material-symbols-outlined text-xl">local_shipping</span>
+</div>
+<div class="pt-1">
+<p class="text-sm font-bold">Out for Delivery</p>
+<p class="text-xs">Your courier will depart shortly with climate-controlled care.</p>
+</div>
+</div>
+<!-- Step 4 (Pending) -->
+<div class="flex gap-6 relative opacity-40">
+<div class="z-10 flex size-10 shrink-0 items-center justify-center rounded-full bg-slate-200 dark:bg-[#332e2e] text-slate-500 dark:text-slate-400 ring-8 ring-background-light dark:ring-background-dark">
+<span class="material-symbols-outlined text-xl">featured_seasonal_and_gifts</span>
+</div>
+<div class="pt-1">
+<p class="text-sm font-bold">Delivered</p>
+<p class="text-xs">A moment of indulgence awaits at your doorstep.</p>
+</div>
+</div>
+</div>
+<!-- Delivery Map Snippet -->
+<div class="px-6 mt-12">
+<div class="relative w-full h-48 rounded-xl overflow-hidden border border-primary/10 dark:border-white/5 grayscale contrast-125">
+<div class="absolute inset-0 bg-[#2a2a2a] flex items-center justify-center">
+<div class="text-center">
+<span class="material-symbols-outlined text-accent-gold text-4xl mb-2">map</span>
+<p class="text-xs text-slate-400 uppercase tracking-widest font-bold">Live Tracking Map</p>
+</div>
+</div>
+<!-- Mock Map Pattern Overlay -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<span class="relative flex h-6 w-6">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-6 w-6 bg-primary border-2 border-white"></span>
+</span>
+</div>
+<div class="absolute bottom-2 left-2 bg-white/90 dark:bg-black/80 px-3 py-1 rounded text-[10px] text-slate-600 dark:text-slate-400">
+                    Location: Paris, France
+                </div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 flex border-t border-primary/10 dark:border-white/5 bg-white/80 dark:bg-[#1c1716]/90 backdrop-blur-md px-4 pb-6 pt-3">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-[#b0a7a6] hover:text-primary dark:hover:text-accent-gold transition-colors" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Boutique</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-[#b0a7a6] hover:text-primary dark:hover:text-accent-gold transition-colors" href="#">
+<span class="material-symbols-outlined">search</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Search</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary dark:text-white" href="#">
+<span class="material-symbols-outlined fill-1">package_2</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Tracking</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-[#b0a7a6] hover:text-primary dark:hover:text-accent-gold transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Profile</p>
+</a>
+</nav>
+</body></html>

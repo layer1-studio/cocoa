@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LuxChoc Boutique | Handcrafted Artisan Chocolates</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3e2723",
+                        "accent-gold": "#C8A951",
+                        "accent-cream": "#F5E6D3",
+                        "background-light": "#f7f7f6",
+                        "background-dark": "#1c1716",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Serif', serif;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #C8A951 0%, #E2CF8E 50%, #C8A951 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-primary dark:text-accent-cream antialiased">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-background-dark/95 backdrop-blur-md border-b border-white/5">
+<div class="max-w-7xl mx-auto flex items-center justify-between p-4 lg:px-8">
+<div class="flex items-center gap-4">
+<button class="text-accent-gold p-2 hover:bg-white/5 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+<div class="flex flex-col items-center">
+<h1 class="text-accent-gold text-2xl font-bold tracking-widest uppercase font-display">LuxChoc</h1>
+<span class="text-[10px] tracking-[0.3em] text-accent-cream/60 uppercase">Boutique</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="text-accent-gold p-2 hover:bg-white/5 rounded-lg transition-colors relative">
+<span class="material-symbols-outlined text-3xl">shopping_bag</span>
+<span class="absolute top-1 right-1 bg-accent-gold text-primary text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">2</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full">
+<div class="relative h-[85vh] @container">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Close up of dark chocolate truffles with gold dust" style="background-image: linear-gradient(rgba(28, 23, 22, 0.4), rgba(28, 23, 22, 0.8)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1w6OYpPXptwo2GYgg1lXcxmJOhTgphgLz0XkF3RtKG4F9_WQ7Qvtni3sVZdrxYNuUcil4orWFLvHQNTAIWxwoydXQuF3u_ul_6uP0jYo8kykXA6RFpzawJah1ZIxitKjt4wXTQK8v16S7Bh-4rxF2j8WjwOkOJBhyIllkNK9bg9xJzoGJiXBqktd64gtSTyw8062-Wk_HQPTXgmAnoLmGfEGROlcqICIpgkXuypaYLh_EIoYzZcRdNDm5i_L1n27ZbUcaTccWGA');">
+</div>
+<div class="relative h-full flex flex-col items-center justify-center text-center px-6 gap-8">
+<div class="max-w-3xl space-y-4">
+<h2 class="text-accent-cream text-5xl @[480px]:text-7xl font-bold leading-tight tracking-tight font-display">
+                            Handcrafted Chocolates <br/>Made Fresh For You
+                        </h2>
+<p class="text-accent-cream/80 text-lg @[480px]:text-xl font-normal max-w-xl mx-auto italic">
+                            Indulge in the finest artisanal truffles and pralines, delivered with care to your door.
+                        </p>
+</div>
+<button class="gold-gradient text-primary px-10 py-4 rounded-lg text-lg font-bold tracking-wider hover:opacity-90 transition-all shadow-xl shadow-black/20">
+                        SHOP NOW
+                    </button>
+</div>
+</div>
+</section>
+<!-- Featured Categories -->
+<section class="max-w-7xl mx-auto py-20 px-4">
+<div class="flex flex-col items-center mb-12">
+<span class="text-accent-gold tracking-[0.4em] uppercase text-sm mb-2">Curated Collections</span>
+<h2 class="text-3xl font-bold font-display text-accent-cream">Featured Categories</h2>
+<div class="w-12 h-0.5 bg-accent-gold mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="group relative overflow-hidden rounded-xl aspect-[4/5] bg-primary">
+<img alt="Dark Chocolate Bars" class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110 opacity-70" data-alt="Stack of premium dark chocolate bars with cocoa nibs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgjZu3R-FH6nj_Wk7IIftpn7D4EkpX_bu1MaV55DZZrFSdMlGHpTOpC7oXtgWQEXgEYY5yqL7ity33C-07hkxVckmBMrYZTs0eal8GsCbOzo9YGBQHBl5gGHYCEZCTDCzI1lIyx5UuCK4f1OO_ayFMbLHNJ0Ia_dNtbkMYYe6ww7e5MbFilNnNXyBIYCP38-bYeDz-JT9KNrxolDVXMdNeqe8NyQxFCzjjyGA9R8Kd1frZfeyfkYZA1CzXT99imHlEbd4AYM83XA"/>
+<div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-background-dark to-transparent">
+<h3 class="text-2xl font-bold text-accent-cream mb-2 font-display">The Dark Collection</h3>
+<p class="text-accent-gold text-sm font-bold tracking-widest uppercase">Explore →</p>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-xl aspect-[4/5] bg-primary">
+<img alt="Pralines" class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110 opacity-70" data-alt="Luxury creamy pralines in a box" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRN0t9hn8CcfDzh79tYm7UjPRdhwTGlhzYN74J0MoDRvxfR2E-PQxab2C3f8uSk9EjSw2efozb7mLCGV4kpbi_68qzdGcY4d9sssYpYDGlxgjTquMYL4wCLwU7IqvNtRumJKfu1k_tzVek2jhSCd82RvHvspRhIm-OgOiIdQFxw0ZZH2hd8P0xaQRcquwwS7wv5PqA-9aLbkj1WHXXBsxWXlwLrMfibCv3pLAeQziSzSgMMpwTbbzTMPh3y_nQWeRH4GyzezbLtw"/>
+<div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-background-dark to-transparent">
+<h3 class="text-2xl font-bold text-accent-cream mb-2 font-display">Creamy Pralines</h3>
+<p class="text-accent-gold text-sm font-bold tracking-widest uppercase">Explore →</p>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-xl aspect-[4/5] bg-primary">
+<img alt="Artisan Truffles" class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110 opacity-70" data-alt="Multi-colored artisanal truffles on a platter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOhukP4IH54S0NSzzAkxQbRs4nMkJpqhSJUm5jIgImJ5D6KX99cdVTo1P8E2FxfAMM3emMW3MsQVLJ9Z_HxiFYSg8HdZ5Ar-jn2Typ4R7QO6-MMKayJcdlRVF35vGy09ik6pEhC1pVzZe58pNGRuJx4bedu93GRUvB4sLmf48qhypgcD3N5iftyWUWBp7THOg2_vdGo0gwkgs3q1rw0V1xod6A4BXEAX0RZ6nL4qjtVWDxjpPCcFHL4kPIIas4RWWRk5Q3dCC0OQ"/>
+<div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-background-dark to-transparent">
+<h3 class="text-2xl font-bold text-accent-cream mb-2 font-display">Artisan Truffles</h3>
+<p class="text-accent-gold text-sm font-bold tracking-widest uppercase">Explore →</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Best Sellers -->
+<section class="bg-primary/30 py-20">
+<div class="max-w-7xl mx-auto px-4">
+<div class="flex justify-between items-end mb-12">
+<div>
+<span class="text-accent-gold tracking-[0.4em] uppercase text-sm mb-2 block">Top Rated</span>
+<h2 class="text-4xl font-bold font-display text-accent-cream">Best Sellers</h2>
+</div>
+<button class="text-accent-cream border-b border-accent-gold pb-1 text-sm font-bold tracking-widest uppercase hover:text-accent-gold transition-colors">
+                        View All
+                    </button>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Product Card 1 -->
+<div class="group space-y-4">
+<div class="relative overflow-hidden rounded-lg aspect-square bg-background-dark">
+<img alt="Sea Salt Caramel" class="object-cover w-full h-full transition-transform group-hover:scale-105" data-alt="Sea salt caramel dark chocolate heart" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNSAdKcmgHESH9HGBjort08eoEgJm_MQOQ4Cqid1G--efw-hX-TK1TGsFC68kkeQHwB955I28dhK5X0IdHuGQUfOPxQUNCyCxVu5ekcbCp-PldAVWbXCVR7jrikCtwoUV049Q2eQDNX62-o5XiEu4jfx7G1MkZ_iR9USjobd0H9M14B88PUWWUlITdM6kT-ig6Hlm8yJsK8gYHN8Pjlapw8JmkzqtWqJr6ZR9JGS9sV5EJJPLuu1yax3900O6T8T9LvtbIbDGp1w"/>
+<button class="absolute bottom-4 left-4 right-4 bg-accent-gold text-primary py-2 text-xs font-bold rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                                QUICK ADD
+                            </button>
+</div>
+<div class="text-center">
+<h4 class="text-accent-cream font-bold">Sea Salt Caramel Heart</h4>
+<p class="text-accent-gold font-display mt-1">$4.50</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group space-y-4">
+<div class="relative overflow-hidden rounded-lg aspect-square bg-background-dark">
+<img alt="Hazelnut Ganache" class="object-cover w-full h-full transition-transform group-hover:scale-105" data-alt="Hazelnut ganache filled chocolate square" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0RHx0PlxhCeHumId9Gqcb86DnkTza7vv12_DuzfgZnxtD21vIXiN1fnVUQmw4QiN0ZEGO1vtZnmk9wk9IFMYVz-jy0HrfxUfaQlBkVOGnrvj4W4_y1Uc1ffv_yCrAHG6vIuDw8erXYjpLcq54S_d2I_d2DYNrU2SMa5FDG0UKCm5uCIw8eo-R5ffo91UGaOAIbUH5dgZME2dp-AUZlpPSmF_NnX2NY0t1B8YMuymzFVtZ1ZmgzVG62Twzs0COH5eNiDaYNcOKpw"/>
+<button class="absolute bottom-4 left-4 right-4 bg-accent-gold text-primary py-2 text-xs font-bold rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                                QUICK ADD
+                            </button>
+</div>
+<div class="text-center">
+<h4 class="text-accent-cream font-bold">70% Single Origin Bar</h4>
+<p class="text-accent-gold font-display mt-1">$12.00</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group space-y-4">
+<div class="relative overflow-hidden rounded-lg aspect-square bg-background-dark">
+<img alt="Raspberry Truffle" class="object-cover w-full h-full transition-transform group-hover:scale-105" data-alt="Raspberry cream filled dark truffle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAOHca_j6VfsB9we4xfk4b2vcq3Yw9dA1eprHdlh0-BuVaOoQSaVsC4PEso9aJsLqFyFWL2ep4UoLu-u2YyhabnWvmX0gZ0ZzKo_votPU1OJlhs4381frmgaArPLnzG3dTy2Ew48K1V4TLj6WgMRfFaU9aFPpOWitSMGbM0uVaJ11H1mVP0EYo9fgs3lkISV8tqZMu6bmyb4WwaQ8kqFdx54Y4Zf-cyLwR4A3juaTqXMelbEy5428jNq_8kV-cG66xXtdl6x6lUg"/>
+<button class="absolute bottom-4 left-4 right-4 bg-accent-gold text-primary py-2 text-xs font-bold rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                                QUICK ADD
+                            </button>
+</div>
+<div class="text-center">
+<h4 class="text-accent-cream font-bold">Raspberry Rose Velvet</h4>
+<p class="text-accent-gold font-display mt-1">$5.00</p>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group space-y-4">
+<div class="relative overflow-hidden rounded-lg aspect-square bg-background-dark">
+<img alt="Gold Leaf Truffle" class="object-cover w-full h-full transition-transform group-hover:scale-105" data-alt="Chocolate truffle decorated with edible gold leaf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUUju9MsoScfMeYAt3BoSNPBS4GiQzg9Dr7dPjob5yKGXCQHRK4BmZCSV6r72L3FWxKDYqDFuifUNHny9ZDmdjhMeJn2CxR2XoYIaEj27wa6-p0pFucKXO8aV05tKYu55NO52Oe8rA7o4czhWKPgiaL1o-StGVyP4nOCqpkBFwcTTqvSiQXr4MISgCc04hklqnv9F76Sx_XGnTPdaUsOvTvXBUCLfgcWCNCu21iTt5SBwL73Cwaq8Q-sVlzwwykUws0ouJvdc9XA"/>
+<button class="absolute bottom-4 left-4 right-4 bg-accent-gold text-primary py-2 text-xs font-bold rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                                QUICK ADD
+                            </button>
+</div>
+<div class="text-center">
+<h4 class="text-accent-cream font-bold">24K Gold Ganache</h4>
+<p class="text-accent-gold font-display mt-1">$8.50</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Custom Gift Boxes Promo -->
+<section class="bg-accent-cream py-20 overflow-hidden relative">
+<div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 items-center gap-12">
+<div class="space-y-6">
+<span class="text-primary/60 tracking-[0.4em] uppercase text-sm font-bold block">Personalized Luxury</span>
+<h2 class="text-5xl font-bold font-display text-primary leading-tight">Your Choice, <br/>Our Craft.</h2>
+<p class="text-primary/80 text-lg leading-relaxed font-display italic">
+                        "Build your custom selection box with the flavors that speak to you. From velvet ganache to crunchy pralines, every box is a unique masterpiece."
+                    </p>
+<div class="pt-4">
+<button class="bg-primary text-accent-cream px-10 py-4 rounded-lg text-lg font-bold tracking-widest hover:bg-primary/90 transition-all shadow-lg">
+                            BUILD YOUR BOX
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -right-20 -top-20 w-80 h-80 bg-accent-gold/20 rounded-full blur-3xl"></div>
+<img alt="Gift Box Customization" class="rounded-xl shadow-2xl relative z-10" data-alt="Beautifully packaged luxury chocolate gift box with ribbon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR7sfGQpZYCfMoMd_1ekzp7tSDx_QbYt90DctJdp_Oir9on9-7lULLzFyTUEuFptpo5O8mTVTlYypuoHQvOo7DF1SUo_kV_R3Ng0jKJqJk6qO-fRTvvAo4fX1KBVyzRQda4tyna6rcx4qLKq7d3LnSlsypyj-GCAsMqKKPWXQWQARGV4amrsEdzFwo2o4sI_MpW9Qu-pT6SlJ6_iYUc4QQrdAv1CdFHkH3NgEIcHwTEDrRj7aZ111cSNRemACarHvSo5dMWOO_Ng"/>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="py-24 max-w-7xl mx-auto px-4">
+<div class="text-center mb-20">
+<h2 class="text-4xl font-bold font-display text-accent-cream mb-4">The LuxChoc Experience</h2>
+<p class="text-accent-cream/60 tracking-widest uppercase text-xs">Freshness in every bite</p>
+</div>
+<div class="grid md:grid-cols-3 gap-16 relative">
+<div class="flex flex-col items-center text-center space-y-6">
+<div class="w-16 h-16 rounded-full border border-accent-gold flex items-center justify-center text-accent-gold">
+<span class="text-2xl font-bold">1</span>
+</div>
+<h3 class="text-xl font-bold font-display">Select Favorites</h3>
+<p class="text-accent-cream/70 text-sm leading-relaxed">Browse our curated seasonal collection of artisanal chocolates and truffles.</p>
+</div>
+<div class="flex flex-col items-center text-center space-y-6">
+<div class="w-16 h-16 rounded-full border border-accent-gold flex items-center justify-center text-accent-gold">
+<span class="text-2xl font-bold">2</span>
+</div>
+<h3 class="text-xl font-bold font-display">Choose Your Box</h3>
+<p class="text-accent-cream/70 text-sm leading-relaxed">Pick a signature boutique box size or a custom-designed luxury gift set.</p>
+</div>
+<div class="flex flex-col items-center text-center space-y-6">
+<div class="w-16 h-16 rounded-full border border-accent-gold flex items-center justify-center text-accent-gold">
+<span class="text-2xl font-bold">3</span>
+</div>
+<h3 class="text-xl font-bold font-display">We Deliver Fresh</h3>
+<p class="text-accent-cream/70 text-sm leading-relaxed">Temper-guarded packaging ensures your chocolates arrive in perfect condition.</p>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-background-dark border-t border-white/5">
+<div class="max-w-3xl mx-auto px-4 text-center space-y-8">
+<span class="material-symbols-outlined text-accent-gold text-5xl">format_quote</span>
+<p class="text-2xl font-display italic leading-relaxed text-accent-cream">
+                    "The depth of flavor in the single origin bars is unlike anything I've tasted before. Truly the gold standard of artisan chocolate."
+                </p>
+<div class="space-y-1">
+<p class="font-bold text-accent-gold tracking-widest uppercase text-sm">Eleanor Vance</p>
+<p class="text-accent-cream/40 text-xs">Connoisseur Magazine</p>
+</div>
+<div class="flex justify-center gap-1 pt-4">
+<div class="w-2 h-2 rounded-full bg-accent-gold"></div>
+<div class="w-2 h-2 rounded-full bg-white/10"></div>
+<div class="w-2 h-2 rounded-full bg-white/10"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary pt-20 pb-10">
+<div class="max-w-7xl mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+<div class="space-y-6">
+<div class="flex flex-col">
+<h2 class="text-accent-gold text-2xl font-bold tracking-widest uppercase font-display">LuxChoc</h2>
+<span class="text-[10px] tracking-[0.3em] text-accent-cream/60 uppercase">Boutique</span>
+</div>
+<p class="text-accent-cream/60 text-sm leading-relaxed">
+                        Crafting exquisite moments of indulgence since 1994. Our chocolates are handmade daily in small batches.
+                    </p>
+<div class="flex gap-4">
+<a class="text-accent-cream/60 hover:text-accent-gold" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="text-accent-cream/60 hover:text-accent-gold" href="#"><span class="material-symbols-outlined">brand_awareness</span></a>
+<a class="text-accent-cream/60 hover:text-accent-gold" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="text-accent-gold font-bold tracking-widest uppercase text-sm">Collections</h4>
+<ul class="space-y-4 text-sm text-accent-cream/70">
+<li><a class="hover:text-accent-gold transition-colors" href="#">Seasonal Specials</a></li>
+<li><a class="hover:text-accent-gold transition-colors" href="#">Truffle Assortment</a></li>
+<li><a class="hover:text-accent-gold transition-colors" href="#">Vegan Selection</a></li>
+<li><a class="hover:text-accent-gold transition-colors" href="#">Gift Cards</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-accent-gold font-bold tracking-widest uppercase text-sm">Customer Care</h4>
+<ul class="space-y-4 text-sm text-accent-cream/70">
+<li><a class="hover:text-accent-gold transition-colors" href="#">Shipping Information</a></li>
+<li><a class="hover:text-accent-gold transition-colors" href="#">Returns &amp; Exchanges</a></li>
+<li><a class="hover:text-accent-gold transition-colors" href="#">Find a Boutique</a></li>
+<li><a class="hover:text-accent-gold transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-accent-gold font-bold tracking-widest uppercase text-sm">The Chocolatier Club</h4>
+<p class="text-accent-cream/60 text-sm">Join for exclusive early access to seasonal launches.</p>
+<div class="flex gap-2">
+<input class="bg-background-dark/50 border-white/10 text-accent-cream text-sm rounded-lg focus:ring-accent-gold focus:border-accent-gold w-full p-2.5" placeholder="Email Address" type="email"/>
+<button class="bg-accent-gold text-primary px-4 rounded-lg font-bold text-xs uppercase tracking-widest">Join</button>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-[10px] text-accent-cream/40 uppercase tracking-[0.2em]">© 2024 LuxChoc Boutique. All Rights Reserved.</p>
+<div class="flex gap-8 text-[10px] text-accent-cream/40 uppercase tracking-[0.2em]">
+<a class="hover:text-accent-cream transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-accent-cream transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-accent-cream transition-colors" href="#">Accessibility</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

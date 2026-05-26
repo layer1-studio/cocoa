@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>COCOA | Artisan Luxury Chocolates</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3e2723",
+                        "background-light": "#f7f7f6",
+                        "background-dark": "#1c1716",
+                        "cream": "#f5f5dc",
+                        "accent": "#d7ccc8"
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Noto Serif', serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-primary dark:text-accent selection:bg-primary/30">
+<!-- Header / Nav -->
+<header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-primary/10 dark:border-white/5">
+<div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary dark:hover:text-white transition-colors">menu</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary dark:hover:text-white transition-colors">search</span>
+</div>
+<h1 class="text-2xl font-bold tracking-widest text-primary dark:text-white">COCOA</h1>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary dark:hover:text-white transition-colors">person</span>
+<div class="relative">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary dark:hover:text-white transition-colors">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[80vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-black/40 z-10"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 hover:scale-105" data-alt="Close up of luxury assorted dark chocolate truffles" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLzbO1tvmLZdeTeMYBSg02hrT6TUcgHf5JUp07yEt-YxC1W919pCtCof4rDLJXSR4fUf4TbNRMRqJmSgPGNJmwz3UZGXzfNUZo1hEp4rf4bVSctT_P7Z1QYDvElIlQxv3kGDYH2GCLHAvSULf3t3dRFPX7eBX4fAomTizYCPukS4-dx4TevNIN_cRuccfyq3gY7v2EnbUl3ZkUpdmHJG2bpOi7fxIED3lINsmaUD1rj5xuKFkb9ZOvudDey1xRKEK9_E7bJlEIqg')">
+</div>
+<div class="relative z-20 text-center px-4 max-w-4xl">
+<h2 class="text-white text-4xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
+                    Handcrafted Chocolates <br/>Made Fresh For You
+                </h2>
+<p class="text-white/90 text-lg md:text-xl mb-8 font-serif italic max-w-2xl mx-auto">
+                    Experience the richness of artisan luxury, delivered from our kitchen to your doorstep.
+                </p>
+<button class="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-lg font-bold tracking-wide transition-all transform hover:-translate-y-1 shadow-xl">
+                    SHOP NOW
+                </button>
+</div>
+</section>
+<!-- Featured Categories -->
+<section class="py-20 px-4 max-w-7xl mx-auto">
+<div class="text-center mb-12">
+<h3 class="text-3xl font-bold mb-2">Shop by Category</h3>
+<div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+<!-- Dark -->
+<div class="group cursor-pointer">
+<div class="aspect-square rounded-xl overflow-hidden mb-4 bg-primary/5 dark:bg-white/5 relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Rich dark chocolate broken into pieces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTuTndKcz6isynjzpLale3Set5_ysvg4e0y16p5d_03uJ505u3-QM3dVBnSiA6pirSKgS_w25SBpnQ1iGXXgppIXMAGy3ffTP3IOjWm9pSAEhwWvLSGoEVSNaLmi29yaijiYbfVuKQ96Rymlhbkv-_Zq866TrNf1SETp8dk2jc3luN-eqDmHNm8TFnbo04IgHhf0jtEV1yRFiPnyA59d1fEjgmfG2cFKuZH65Xk6599v_bG6EfLcXaPJ1-9qNMmBeKnUw0QtjfkQ"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/0 transition-colors"></div>
+</div>
+<p class="text-center font-bold uppercase tracking-widest text-sm">Dark</p>
+</div>
+<!-- Milk -->
+<div class="group cursor-pointer">
+<div class="aspect-square rounded-xl overflow-hidden mb-4 bg-primary/5 dark:bg-white/5 relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Creamy milk chocolate bars with hazelnut" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNRHjHRfuYnDyQCg7Kj3P7edXD2dqkL_GmCejx5a92SmFN_4V-oLHoDDgsta_na4gLiaklwJzPqXeUYy3mxQj5NrCLeVV7I25Wa3kU1dKG-M1RVN6QJTjTm_duGbnS2lcPK9AYK8PfszfhN5G5SQGseJb07vcEGXmTgPgYHMWzpAjL_yjMZStuJFYNu0WXvuPdWxPx_CnT_u408QzTCFnAk4ov7Gpt5TbSlKbvPnc_ayg6bMsqzMKUAwSiUlPw-jLEa3GooguyQg"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/0 transition-colors"></div>
+</div>
+<p class="text-center font-bold uppercase tracking-widest text-sm">Milk</p>
+</div>
+<!-- Truffles -->
+<div class="group cursor-pointer">
+<div class="aspect-square rounded-xl overflow-hidden mb-4 bg-primary/5 dark:bg-white/5 relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Decorative handmade chocolate truffles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv6Kwtd6rEcAsoVo17uoN5CMzFal8-8SiRezsgLoKzMRAh4iGtDdsClFvtCLAuOIl8KCq7pR97Ntj5M61izc1YUxaLt73t2atstylBUw-k95FBIGdRI3gkAINH6yAZh3-bngl9q01o4Wowbxmt6cccj4sGeVddvTubFRB0KMiI7lk0bKkkCviiVl5o0sp84jrzaEbRaWqfqJv0zxg6PnDRqFbOFUWstb0mXpJCUIukkK_cfv6Df97kpHHlQ8w-_uy8k1iyYaq0SA"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/0 transition-colors"></div>
+</div>
+<p class="text-center font-bold uppercase tracking-widest text-sm">Truffles</p>
+</div>
+<!-- Gift Boxes -->
+<div class="group cursor-pointer">
+<div class="aspect-square rounded-xl overflow-hidden mb-4 bg-primary/5 dark:bg-white/5 relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Elegant chocolate gift box tied with ribbon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRWWN7MqG3Pe29zxjOQrLNDh8NU8_BHqvFlGkhiwTOIErXADOvnFC8bwlMUHHpB5s1WqtaQDwn2q4ape8pLlactUWMHW59EWF0FKz_XkCNrzQm6GgTy9m0eSgteEBkhWNAu9nEnKxnpE8ddOIBO-mhUq00xEsFnUWhESuuscDeKSkFHaf2Y3uuBZgsOBUQ3-VyUJbQyZRXHmXEEmuEu80ag-g93T7cEUIYJYBHPmCAh-ztxXEjafDsJ_CGunDOgMfA8rTG2UAeaw"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/0 transition-colors"></div>
+</div>
+<p class="text-center font-bold uppercase tracking-widest text-sm">Gift Boxes</p>
+</div>
+<!-- Seasonal -->
+<div class="group cursor-pointer col-span-2 md:col-span-1">
+<div class="aspect-square rounded-xl overflow-hidden mb-4 bg-primary/5 dark:bg-white/5 relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Seasonal decorated chocolates for holidays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCasHLGrvLRUy2VHnQLeRtBwi-ScXAelczhf7nlLfwOna8NWIYM9e1GAzc2HcSk9CY2TIJ7VreYQF5ES_x6fbLHttIVw2txYriSF2hMA83yFJbEfb5OE1ldwd7Q5ZPDs9jspP7msO_v5izI8ip88jvcgsy1uQTF2SB5CXjFnVYJq2vb375QzNyUS1Vr3Pnv8s2QqpzjOh6vqR-v_KiUFkr-OkdmtYn1SYNe6F02rOBJwFCPZIa6YhbQBfZ2mXEqX-7q_2iU60LBNA"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/0 transition-colors"></div>
+</div>
+<p class="text-center font-bold uppercase tracking-widest text-sm">Seasonal</p>
+</div>
+</div>
+</section>
+<!-- Best Sellers Section -->
+<section class="bg-primary/5 dark:bg-white/[0.02] py-24 px-4">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h3 class="text-3xl font-bold mb-4">Our Best Sellers</h3>
+<p class="text-primary/70 dark:text-accent/70 max-w-md">Our most-loved creations, perfected over decades of artisan craftsmanship.</p>
+</div>
+<a class="text-primary dark:text-white font-bold border-b-2 border-primary pb-1 hover:opacity-70 transition-opacity" href="#">View All Products</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- Product 1 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-xl mb-4">
+<img class="w-full aspect-[4/5] object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Sea salt caramel truffle product shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKlzBUKLMs2pLHLyFys-FKsC874vTjUHXPC_kJyl3k-4uYdnNVAcjAcIiadu-8iiLchKro0bs4lkDMOKP8dIh0j7979ihMYDSmdAbJfZD6uv2qVTnIRMI3VLUUN7yb68BW5ltqQBr9M8OC2EtTQN78t1dJ8JFb65Yg1D-xJXgPoDR2lgWtNcmpQnm4-Mn0WCSLhCkPsWn8y-0sbhKa6Lwdmvd_KGwxMU48domNUz_zEIPr_Xjdr-q35E0sLMbZqX_EgYpWH25F-Q"/>
+<button class="absolute bottom-4 right-4 bg-white text-primary p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<h4 class="font-bold text-lg mb-1">Sea Salt Caramel Truffle</h4>
+<p class="text-primary/60 dark:text-accent/60 text-sm mb-2">Box of 12</p>
+<p class="font-bold text-primary dark:text-white">$32.00</p>
+</div>
+<!-- Product 2 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-xl mb-4">
+<img class="w-full aspect-[4/5] object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Single origin dark chocolate bar 70%" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkSxduiPCeHopNLt1A3BjjnBAMXi7o3D4XMJcLz57N8d_zGniz5PTS2eK3q5vSYlyXpTz2PbGNUvWAbCxvth5k2b3NjfV4mRsSGiUZLJyUrVYWoLW6z3TQGOTCHnExh4qBoe7E_wdZ8NmkWykjSrAhJse0J6qjjntb5VNF4BQaH_9xKWffbpb4wUgIVMRH6uBCGl2BUjjDqkMf629ek0mi1z2CfX_CZMkKKWD3UKNIp4WaifPWDeSeLuoox7pVS39bmyI4MZTOeg"/>
+<button class="absolute bottom-4 right-4 bg-white text-primary p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<h4 class="font-bold text-lg mb-1">70% Single Origin Bar</h4>
+<p class="text-primary/60 dark:text-accent/60 text-sm mb-2">Signature Series</p>
+<p class="font-bold text-primary dark:text-white">$14.00</p>
+</div>
+<!-- Product 3 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-xl mb-4">
+<img class="w-full aspect-[4/5] object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Raspberry cream chocolate heart" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_If8s_1YM0N8YmFkrVKzXuEWTPCQGczej8PlheDuTYAaVJ09hWy8BmUcpuxutuq7SO3TOv0VK1J29GTp0F_VYA3oTRi-NBwXg8qDDT-oTPAtLw676Yo2O4ivBuDtU7ex_FyclUDVq2K14P-UQWKs6cH4qGF7WtaWOwNq2xow5tZ3G-MS-9LgunjQvCrdKR9ss2yfTv3_txp3xXA7X9jwCZJ5uzAKHRZucBCFbLzl0M9VR6SX62LWUoxMW0mQheH7_YqCfNhUu0w"/>
+<button class="absolute bottom-4 right-4 bg-white text-primary p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<h4 class="font-bold text-lg mb-1">Wild Raspberry Cream</h4>
+<p class="text-primary/60 dark:text-accent/60 text-sm mb-2">Seasonal Limited</p>
+<p class="font-bold text-primary dark:text-white">$28.00</p>
+</div>
+<!-- Product 4 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-xl mb-4">
+<img class="w-full aspect-[4/5] object-cover transition-transform duration-500 group-hover:scale-105" data-alt="The Ultimate Masterpiece collection box" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcdB2XyqDdUPpQwfhkTURXfpxCh5xxAipKv-7pfEXcAFX4dU46pFHpJuMOTkOFOgbRJo0ZEuHxsbNP5I9Trci0gJrLKgUN0_8lTecA0GDrrb5nDS1EIGdBXNIrFEVEjJ_iu8gYyfP0JcsDsleXNFxe5Rgd-MDK_5-lcB5SIQLliYFtCV-B80WIhHzN8ZWWhbVRELjA6ahZZdLsijYhEmNW6xAGb91GQNx9rmxh_oeX_aMvqM-Z1qUGd0YqwKfhYcskRujEkDiT1A"/>
+<button class="absolute bottom-4 right-4 bg-white text-primary p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<h4 class="font-bold text-lg mb-1">The Masterpiece Box</h4>
+<p class="text-primary/60 dark:text-accent/60 text-sm mb-2">24 Assorted Truffles</p>
+<p class="font-bold text-primary dark:text-white">$58.00</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Custom Gift Boxes Promotion -->
+<section class="py-24 px-4 bg-primary text-white overflow-hidden relative">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-1/2 relative z-10">
+<span class="text-accent uppercase tracking-[0.3em] font-bold text-xs mb-4 block">Personalized Luxury</span>
+<h3 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Create Your Own <br/>Custom Gift Box</h3>
+<p class="text-accent/80 mb-8 text-lg font-serif">Select from our signature truffles to build a personalized collection. Perfect for corporate gifting, weddings, or a special someone.</p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent">check_circle</span>
+<span>Choose from 40+ unique flavors</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent">check_circle</span>
+<span>Premium wooden box packaging</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent">check_circle</span>
+<span>Handwritten personalized note</span>
+</li>
+</ul>
+<button class="bg-white text-primary px-8 py-3 rounded-lg font-bold hover:bg-accent transition-colors">START CURATING</button>
+</div>
+<div class="w-full md:w-1/2 relative">
+<div class="aspect-video rounded-2xl overflow-hidden shadow-2xl rotate-2">
+<img class="w-full h-full object-cover" data-alt="Beautifully packed assorted chocolate gift box" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3LCzJTN-XpLPHYfqMS9jSj-mJHZJMnDwjn4mKBA9wp_5tJfRsZFMzH7NdZv8DzGoc76QUk2NER3PKnQlBMQesURwi5CMEliE8uIfa9aFlHpdykne4B2dIxMHbkxQcPyp38s_GZBmdxrV97QB1BUxpyeeyg7meGAdIigGHNWGrGQRH0t4BIfO9Gz8iLoOx_-dXXLTurNByCKV7YF427D_KFJudGLDCK6ZNi8mIFmjEhbmiW8xG_jitNS67_l6KZJIpZj1Xbj8Yhw"/>
+</div>
+<div class="absolute -bottom-6 -left-6 aspect-square w-40 bg-accent rounded-xl p-2 shadow-2xl -rotate-6 hidden md:block">
+<img class="w-full h-full object-cover rounded-lg" data-alt="Close up of a single golden truffle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzhBhrzzmH5CkpDNMNCEH2Q9ob4LAzgpX12lDrcRihp8IU7wQgk1Z7OE5XEAvmrNQAeYN3fXl4IMvGVDY6vOTCNKv1nzTN---E1Vn1x_0ttnaR8nSgQTR0_8iXuDTlM7QAbS4y983JBe3RsfNr0N9iuqD_vlKEW5Im-zoPw0rYPFs5dbs1nNDn6_QZs6NwEoDYUBMOYI6uinEgx0l7rv7yi6Hz5mW4M6ZlITQRmAuqknPiCLQc75xEt6wyrYk-vMkVWw1xowmBbA"/>
+</div>
+</div>
+</div>
+<!-- Background Decoration -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+</section>
+<!-- How It Works -->
+<section class="py-24 px-4 max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h3 class="text-3xl font-bold mb-4">The COCOA Experience</h3>
+<p class="text-primary/60 dark:text-accent/60 italic font-serif">From bean to box, delivered with care.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+<!-- Step 1 -->
+<div class="text-center relative">
+<div class="w-20 h-20 bg-primary/5 dark:bg-white/5 rounded-full flex items-center justify-center mx-auto mb-6 border border-primary/10">
+<span class="material-symbols-outlined text-primary dark:text-white text-4xl">shopping_cart_checkout</span>
+</div>
+<h4 class="font-bold text-xl mb-3">1. Order Online</h4>
+<p class="text-primary/60 dark:text-accent/60 px-4">Browse our curated selections or build your own custom box from our seasonal menu.</p>
+<div class="hidden md:block absolute top-10 left-[65%] w-[70%] border-t-2 border-dashed border-primary/10"></div>
+</div>
+<!-- Step 2 -->
+<div class="text-center relative">
+<div class="w-20 h-20 bg-primary/5 dark:bg-white/5 rounded-full flex items-center justify-center mx-auto mb-6 border border-primary/10">
+<span class="material-symbols-outlined text-primary dark:text-white text-4xl">restaurant</span>
+</div>
+<h4 class="font-bold text-xl mb-3">2. Freshly Made</h4>
+<p class="text-primary/60 dark:text-accent/60 px-4">Our chocolatiers prepare your order small-batch to ensure the peak of flavor and texture.</p>
+<div class="hidden md:block absolute top-10 left-[65%] w-[70%] border-t-2 border-dashed border-primary/10"></div>
+</div>
+<!-- Step 3 -->
+<div class="text-center">
+<div class="w-20 h-20 bg-primary/5 dark:bg-white/5 rounded-full flex items-center justify-center mx-auto mb-6 border border-primary/10">
+<span class="material-symbols-outlined text-primary dark:text-white text-4xl">local_shipping</span>
+</div>
+<h4 class="font-bold text-xl mb-3">3. Luxury Delivery</h4>
+<p class="text-primary/60 dark:text-accent/60 px-4">Carefully packed in temperature-controlled packaging and delivered to your doorstep.</p>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="bg-background-light dark:bg-background-dark py-24 px-4">
+<div class="max-w-4xl mx-auto text-center">
+<span class="material-symbols-outlined text-primary dark:text-white text-5xl mb-8 opacity-30">format_quote</span>
+<div class="space-y-12">
+<div class="animate-fade-in">
+<p class="text-2xl md:text-3xl font-serif italic mb-6 text-primary dark:text-accent">
+                            "The best chocolate I've ever tasted. The attention to detail in the packaging and the complexity of flavors in the truffles is truly unparalleled."
+                        </p>
+<p class="font-bold tracking-widest uppercase text-sm">— ELIZABETH THORNE, CONNOISSEUR</p>
+</div>
+</div>
+<div class="flex justify-center gap-2 mt-12">
+<span class="w-3 h-3 bg-primary rounded-full"></span>
+<span class="w-3 h-3 bg-primary/20 rounded-full"></span>
+<span class="w-3 h-3 bg-primary/20 rounded-full"></span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-light dark:bg-background-dark border-t border-primary/10 dark:border-white/5 pt-20 pb-10 px-4">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<h2 class="text-2xl font-bold tracking-widest mb-6">COCOA</h2>
+<p class="text-primary/60 dark:text-accent/60 mb-6">Defining the standards of artisan chocolate since 1994. Every piece is a masterpiece.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-primary/5 dark:bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary/5 dark:bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">camera</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary/5 dark:bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold uppercase tracking-widest text-xs mb-6">Shop</h4>
+<ul class="space-y-4 text-primary/60 dark:text-accent/60 text-sm">
+<li><a class="hover:text-primary dark:hover:text-white transition-colors" href="#">All Products</a></li>
+<li><a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Truffle Collections</a></li>
+<li><a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Gift Subscriptions</a></li>
+<li><a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Corporate Gifting</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold uppercase tracking-widest text-xs mb-6">Company</h4>
+<ul class="space-y-4 text-primary/60 dark:text-accent/60 text-sm">
+<li><a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-primary dark:hover:text-white transition-colors" href="#">The Process</a></li>
+<li><a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Sustainability</a></li>
+<li><a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Locations</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold uppercase tracking-widest text-xs mb-6">Support</h4>
+<ul class="space-y-4 text-primary/60 dark:text-accent/60 text-sm">
+<li><a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Shipping Info</a></li>
+<li><a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Care Guide</a></li>
+<li><a class="hover:text-primary dark:hover:text-white transition-colors" href="#">FAQs</a></li>
+<li><a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-8 border-t border-primary/5 dark:border-white/5 flex flex-col md:row justify-between items-center gap-4 text-[10px] uppercase tracking-widest text-primary/40 dark:text-accent/40">
+<p>© 2024 COCOA ARTISAN CHOCOLATE. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-6">
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-background-light dark:bg-background-dark border-t border-primary/10 dark:border-white/5 px-6 py-2 flex justify-between items-center">
+<a class="flex flex-col items-center gap-1 text-primary dark:text-white" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] uppercase font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary/50 dark:text-accent/50" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-[10px] uppercase font-bold">Shop</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary/50 dark:text-accent/50" href="#">
+<span class="material-symbols-outlined">featured_seasonal_and_gifts</span>
+<span class="text-[10px] uppercase font-bold">Offers</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary/50 dark:text-accent/50" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] uppercase font-bold">Profile</span>
+</a>
+</div>
+</body></html>

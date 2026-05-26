@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Your Selection | COCOA Luxury Chocolatier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3e2723",
+                        "background-light": "#f7f7f6",
+                        "background-dark": "#1c1716",
+                        "cocoa-accent": "#b0a7a6",
+                        "cocoa-border": "#332e2e",
+                        "cocoa-surface": "#23201f",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        .font-display {
+            font-family: 'Noto Serif', serif;
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1c1716;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3e2723;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-white min-h-screen flex flex-col max-w-md mx-auto border-x border-cocoa-border shadow-2xl">
+<!-- Header Navigation -->
+<header class="sticky top-0 z-50 bg-background-dark/90 backdrop-blur-md border-b border-cocoa-border px-4 py-4 flex items-center justify-between">
+<button class="flex items-center justify-center text-white/80 hover:text-white transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-display text-xl font-bold tracking-tight text-center flex-1">SHOPPING BAG</h1>
+<button class="flex items-center justify-center text-white/80 hover:text-white transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+</header>
+<main class="flex-1 overflow-y-auto px-4 py-6">
+<div class="mb-8">
+<h2 class="font-display text-2xl font-bold mb-1">Your Selection</h2>
+<p class="text-cocoa-accent text-sm italic">Artisanal treats curated for you</p>
+</div>
+<!-- Product List -->
+<div class="space-y-6">
+<!-- Product Item 1 -->
+<div class="group relative flex gap-4 bg-cocoa-surface/30 p-3 rounded-xl border border-cocoa-border hover:border-primary/50 transition-all duration-300">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-24 shrink-0 shadow-lg" data-alt="Handcrafted dark chocolate bars from Madagascar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCF3nu4R-HfkvARULZJhOSxWqfauJrcOYrXBzp1h71o2KTg25FLJb3B3ro7I3zN63jPx0LuGyuZ_atF1FJhn_GmCQQXyW5inbroyJvmfJvbzi-eoo2GpFFFTg1l_f3fSYYoCjDQn32ABC9DOghcE_9DfasglMwVIVp4eVwxhv73rZhhL4haEBbnUHVm78Ka5yauJAmc1eb9WOcDHXGC-1vfWezAyQTEeaqBA55wdYDlNe_XEHqUpeKyf9q3LmXgj_ZeJZweBgDkvg");'>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-display text-lg font-bold leading-tight truncate pr-2">Single Origin Madagascar Dark</h3>
+<button class="text-cocoa-accent hover:text-red-400 transition-colors">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="mt-1 flex items-center gap-1.5 text-cocoa-accent text-xs">
+<span class="material-symbols-outlined text-[14px]">edit_note</span>
+<p class="italic truncate">"Happy Birthday, Leo!"</p>
+</div>
+<div class="mt-auto flex items-end justify-between pt-2">
+<p class="font-sans font-semibold text-lg">$18.00</p>
+<div class="flex items-center bg-background-dark/80 rounded-full border border-cocoa-border px-1 py-1">
+<button class="size-7 flex items-center justify-center rounded-full hover:bg-cocoa-border transition-colors">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="w-8 text-center font-medium text-sm">2</span>
+<button class="size-7 flex items-center justify-center rounded-full hover:bg-cocoa-border transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Item 2 -->
+<div class="group relative flex gap-4 bg-cocoa-surface/30 p-3 rounded-xl border border-cocoa-border hover:border-primary/50 transition-all duration-300">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-24 shrink-0 shadow-lg" data-alt="Gourmet sea salt caramel truffles selection" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA70pZRG7pQp-JUTi02W28BJ2GzikVZkcd-DYeZ_xjK68Hxj5f-gmNsG2NpahxATY4rc3qEyvNS1cLthA-CYS7cuMQ3yG3ZOI1lajVmx5Wp_TI-CaaRYUV6KKfhtnizhlJYfw1nJsPSfOX_owf0GNMN5gKsNp1usaZL1TLDPR-osyBfmDIdZ39rQ9Ld-v8IFtRbKsrPuyUYXTQGXxNLO34tPKGBZ7DGOP1mqdme7rni0B4ssodivQI0ZXW0ap8O9egxOhwKLFIz7A");'>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-display text-lg font-bold leading-tight truncate pr-2">Sea Salt Caramel Truffles</h3>
+<button class="text-cocoa-accent hover:text-red-400 transition-colors">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="mt-1 flex items-center gap-1.5 text-cocoa-accent text-xs">
+<span class="material-symbols-outlined text-[14px]">edit_note</span>
+<p class="italic truncate">"Enjoy the sweetness."</p>
+</div>
+<div class="mt-auto flex items-end justify-between pt-2">
+<p class="font-sans font-semibold text-lg">$24.00</p>
+<div class="flex items-center bg-background-dark/80 rounded-full border border-cocoa-border px-1 py-1">
+<button class="size-7 flex items-center justify-center rounded-full hover:bg-cocoa-border transition-colors">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="w-8 text-center font-medium text-sm">1</span>
+<button class="size-7 flex items-center justify-center rounded-full hover:bg-cocoa-border transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty Space filler for aesthetic -->
+<div class="pt-4 border-t border-cocoa-border/30">
+<div class="flex items-center gap-2 text-cocoa-accent py-2 group cursor-pointer">
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">add_circle</span>
+<span class="text-sm font-medium">Add a gift box or personalized message</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Cart Summary & Checkout -->
+<footer class="bg-cocoa-surface border-t border-cocoa-border px-6 pt-6 pb-8 space-y-4 rounded-t-3xl shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
+<div class="space-y-2">
+<div class="flex justify-between text-cocoa-accent text-sm">
+<span>Subtotal</span>
+<span class="text-white font-medium">$60.00</span>
+</div>
+<div class="flex justify-between text-cocoa-accent text-sm">
+<div class="flex items-center gap-1">
+<span>Delivery</span>
+<span class="material-symbols-outlined text-[14px]">info</span>
+</div>
+<span class="text-white font-medium">$12.00</span>
+</div>
+<div class="pt-2 mt-2 border-t border-cocoa-border flex justify-between items-baseline">
+<span class="font-display text-lg font-bold">Total</span>
+<span class="font-display text-2xl font-bold text-white">$72.00</span>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/80 text-white font-display font-bold py-4 rounded-xl shadow-lg shadow-black/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2 tracking-widest uppercase text-sm">
+            Proceed to Checkout
+            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<!-- Bottom Navigation Bar -->
+<div class="flex justify-around items-center pt-2 -mx-2">
+<a class="flex flex-col items-center gap-1 text-primary brightness-150" href="#">
+<span class="material-symbols-outlined fill-[1]">shopping_bag</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Shop</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-cocoa-accent hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Favorites</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-cocoa-accent hover:text-white transition-colors relative" href="#">
+<span class="material-symbols-outlined">shopping_basket</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Cart</span>
+<span class="absolute -top-1 right-0 size-4 bg-primary text-[10px] flex items-center justify-center rounded-full border border-background-dark font-bold">3</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-cocoa-accent hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</a>
+</div>
+</footer>
+</body></html>

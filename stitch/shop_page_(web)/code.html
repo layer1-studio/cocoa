@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luxury Chocolate Boutique</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3e2723",
+                        "background-light": "#f7f7f6",
+                        "background-dark": "#1c1716",
+                        "accent-gold": "#c5a059",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        h1, h2, h3, .font-display {
+            font-family: 'Noto Serif', serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #3e2723;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-stone-800 dark:text-stone-200 min-h-screen flex flex-col">
+<!-- Header Section -->
+<header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-primary/10 dark:border-primary/30">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<!-- Logo -->
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-accent-gold text-3xl">diamond</span>
+<h1 class="text-xl md:text-2xl font-bold tracking-tight text-primary dark:text-white">MAISON DU CHOCOLAT</h1>
+</div>
+<!-- Desktop Search -->
+<div class="hidden md:flex flex-1 max-w-md mx-8">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-stone-400">search</span>
+<input class="w-full bg-stone-100 dark:bg-stone-800/50 border-none rounded-lg py-2 pl-10 pr-4 focus:ring-1 focus:ring-primary text-sm" placeholder="Search collections..." type="text"/>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="md:hidden text-stone-600 dark:text-stone-300">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="relative p-2 text-stone-600 dark:text-stone-300">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">3</span>
+</button>
+<button class="hidden sm:block p-2 text-stone-600 dark:text-stone-300">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
+<!-- Hero/Breadcrumb Area -->
+<div class="mb-8">
+<nav class="flex text-xs uppercase tracking-widest text-stone-500 mb-4">
+<a class="hover:text-primary" href="#">Boutique</a>
+<span class="mx-2">/</span>
+<span class="text-primary dark:text-accent-gold font-bold">All Collections</span>
+</nav>
+<h2 class="text-3xl md:text-4xl font-bold text-stone-900 dark:text-white mb-2">Our Masterpieces</h2>
+<p class="text-stone-600 dark:text-stone-400 max-w-2xl italic font-display">Handcrafted with rare single-origin cocoa and the finest seasonal ingredients since 1924.</p>
+</div>
+<!-- Filters & Sorting -->
+<div class="flex flex-col md:flex-row gap-4 mb-10 items-center justify-between border-y border-stone-200 dark:border-stone-800 py-4">
+<div class="flex gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 custom-scrollbar whitespace-nowrap">
+<button class="px-5 py-2 rounded-full bg-primary text-white text-sm font-medium">All Varieties</button>
+<button class="px-5 py-2 rounded-full bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300 text-sm font-medium hover:bg-stone-200 dark:hover:bg-stone-700 transition-colors">Truffles</button>
+<button class="px-5 py-2 rounded-full bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300 text-sm font-medium hover:bg-stone-200 dark:hover:bg-stone-700 transition-colors">Dark Bars</button>
+<button class="px-5 py-2 rounded-full bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300 text-sm font-medium hover:bg-stone-200 dark:hover:bg-stone-700 transition-colors">Gift Boxes</button>
+<button class="px-5 py-2 rounded-full bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300 text-sm font-medium hover:bg-stone-200 dark:hover:bg-stone-700 transition-colors">Seasonal</button>
+</div>
+<div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end border-t md:border-t-0 pt-4 md:pt-0 border-stone-200 dark:border-stone-800">
+<div class="flex items-center gap-2">
+<span class="text-xs uppercase tracking-tighter text-stone-500 font-bold">Sort By:</span>
+<select class="bg-transparent border-none text-sm font-bold text-primary dark:text-white focus:ring-0 p-0 pr-8 cursor-pointer">
+<option>Featured</option>
+<option>Price: High to Low</option>
+<option>Price: Low to High</option>
+<option>Newest Arrival</option>
+</select>
+</div>
+<button class="flex items-center gap-2 text-stone-600 dark:text-stone-300 border border-stone-300 dark:border-stone-700 rounded-lg px-4 py-1.5 text-sm hover:bg-stone-50 dark:hover:bg-stone-800">
+<span class="material-symbols-outlined text-lg">filter_list</span>
+<span>Filters</span>
+</button>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12">
+<!-- Card 1 -->
+<div class="group flex flex-col">
+<div class="relative aspect-square overflow-hidden rounded-xl bg-stone-100 dark:bg-stone-800 mb-4">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of artisan dark chocolate truffles" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCU82KGTog_NTRaxBj5XSwlSQy8pOV62t6cyGUATTjVhY6amWLtvQmOzU26-GKg3OJatDAl6YNmDpIuTFFlkZ4QvJ3Wr-k6PyUVfvheEkx_vv5HFECyNaEZfCPlJxANq6DU03vyWyB0Duc330O8csw7CYVYYebYh6QBca2UAiLX0Zbga-8qrKxkbpZf5PEe-JJmiKL-3BujsT48RRIWVxPu9IAZDDQsSD6LvCfCrP_cy6IM5PRPchSrkSA76sw8cNsQofaztDnhMA')"></div>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-primary/90 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-primary dark:text-white backdrop-blur">Signature</div>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-lg font-bold text-stone-900 dark:text-white group-hover:text-primary dark:group-hover:text-accent-gold transition-colors">70% Dark Ganache</h3>
+<span class="font-display font-bold text-primary dark:text-accent-gold">$12.50</span>
+</div>
+<p class="text-sm text-stone-500 dark:text-stone-400 mb-4 line-clamp-2">Silky smooth Madagascar origin dark chocolate with a hint of organic vanilla bean.</p>
+<div class="mt-auto space-y-3">
+<div class="flex items-center justify-between bg-stone-100 dark:bg-stone-800/50 rounded-lg p-1">
+<button class="w-8 h-8 flex items-center justify-center rounded hover:bg-white dark:hover:bg-stone-700 transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-xs font-bold px-4">1</span>
+<button class="w-8 h-8 flex items-center justify-center rounded hover:bg-white dark:hover:bg-stone-700 transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="w-full py-3 bg-primary text-white text-xs font-bold uppercase tracking-widest rounded-lg flex items-center justify-center gap-2 hover:bg-opacity-90 transition-all shadow-md group-hover:shadow-primary/20">
+<span class="material-symbols-outlined text-lg">shopping_bag</span>
+                            Add to Cart
+                        </button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col">
+<div class="relative aspect-square overflow-hidden rounded-xl bg-stone-100 dark:bg-stone-800 mb-4">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-110" data-alt="Salted caramel pralines on a wooden surface" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDdP9Pk-EAv3L2TdXPWmbX53kpdXiOofDd8VrdzkeLwVdAprjE_vjHiQD5YHGif_z25D4sldC6r6BBrvVMV4pw8R65gsFrIYFlcwIcywMu8SJKfXucCzdh0JaH3mj1hhqlqyCjWq4eQGv0TQoep-N80ONJGPbxB0eVy7kCavWvenz-Y68Jg5z3HOx5wHxoqsr78JpzoveNOk01yguSoejFcJ1OqA_6p4l7mlPp7pT9qJcMVgk4YtbemczoBQ1WCVA5osR20l-tKWQ')"></div>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-lg font-bold text-stone-900 dark:text-white group-hover:text-primary dark:group-hover:text-accent-gold transition-colors">Sea Salt Praline</h3>
+<span class="font-display font-bold text-primary dark:text-accent-gold">$10.00</span>
+</div>
+<p class="text-sm text-stone-500 dark:text-stone-400 mb-4 line-clamp-2">Hand-harvested sea salt flakes paired with buttery caramel and roasted hazelnuts.</p>
+<div class="mt-auto space-y-3">
+<div class="flex items-center justify-between bg-stone-100 dark:bg-stone-800/50 rounded-lg p-1">
+<button class="w-8 h-8 flex items-center justify-center rounded hover:bg-white dark:hover:bg-stone-700 transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-xs font-bold px-4">1</span>
+<button class="w-8 h-8 flex items-center justify-center rounded hover:bg-white dark:hover:bg-stone-700 transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="w-full py-3 bg-primary text-white text-xs font-bold uppercase tracking-widest rounded-lg flex items-center justify-center gap-2 hover:bg-opacity-90 transition-all shadow-md group-hover:shadow-primary/20">
+<span class="material-symbols-outlined text-lg">shopping_bag</span>
+                            Add to Cart
+                        </button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col">
+<div class="relative aspect-square overflow-hidden rounded-xl bg-stone-100 dark:bg-stone-800 mb-4">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-110" data-alt="Luxury gift box of assorted chocolates" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAF-mVeRe7QYUlehE-4L66Km1PVH3jgBPL3b8RI7ZYVA8dXRRTkwC8slFlNo4Rpp2HVKIkAr4eUK3RzCeeEYzEhyUemZmD8J7EVpz7O9pgWnodA3-JD93wG_cnvZQ-JWG_5hktBjcYWzC64AzPFGjCaWc_HnckyvKEam-GOS92063CU3Kpl3v1yT41-3VKhsUZJAi-n4xsUUeRoFTFpHwdS5AsZnEEu1q2U4t4534qHCVWiIaSGhR4hKg1YXjmEkkv1A9OqHqa6RA')"></div>
+<div class="absolute top-3 left-3 bg-accent-gold px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-white shadow-lg">Bestseller</div>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-lg font-bold text-stone-900 dark:text-white group-hover:text-primary dark:group-hover:text-accent-gold transition-colors">Truffle Discovery Box</h3>
+<span class="font-display font-bold text-primary dark:text-accent-gold">$45.00</span>
+</div>
+<p class="text-sm text-stone-500 dark:text-stone-400 mb-4 line-clamp-2">A curated selection of 16 artisan truffles including ganache, fruit, and nut varieties.</p>
+<div class="mt-auto space-y-3">
+<div class="flex items-center justify-between bg-stone-100 dark:bg-stone-800/50 rounded-lg p-1">
+<button class="w-8 h-8 flex items-center justify-center rounded hover:bg-white dark:hover:bg-stone-700 transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-xs font-bold px-4">1</span>
+<button class="w-8 h-8 flex items-center justify-center rounded hover:bg-white dark:hover:bg-stone-700 transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="w-full py-3 bg-primary text-white text-xs font-bold uppercase tracking-widest rounded-lg flex items-center justify-center gap-2 hover:bg-opacity-90 transition-all shadow-md group-hover:shadow-primary/20">
+<span class="material-symbols-outlined text-lg">shopping_bag</span>
+                            Add to Cart
+                        </button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group flex flex-col">
+<div class="relative aspect-square overflow-hidden rounded-xl bg-stone-100 dark:bg-stone-800 mb-4">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-110" data-alt="Chocolate bars with nut and fruit toppings" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxY71Yzpv31epEDuZmvWxIVs5c8TMM-PjQWTi9cXn5NKNwE_QfgyEIxx7t3AKnazrNxXR4cFZ-LzT63Qprw0qkfYi1pZY8Z4rf7A4aP2sUwHdNiVpwD-qGALj5ilyljiqL5Lt5IIHHpg_9J8-Ty-QVz6EvwT1N9GulQVk15EG0rppjHWZYi1UL5uz1UVLz5oJJAU9E0hTyHVE-heDcx3V5cfQK7frx2nD8ep7iOE7FKLGWty8a7lfxH2kIr8j3-z8FxqIFNWcK9A')"></div>
+<div class="absolute top-3 left-3 bg-stone-900/80 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-white backdrop-blur">Limited</div>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-lg font-bold text-stone-900 dark:text-white group-hover:text-primary dark:group-hover:text-accent-gold transition-colors">Roasted Pistachio Bar</h3>
+<span class="font-display font-bold text-primary dark:text-accent-gold">$14.00</span>
+</div>
+<p class="text-sm text-stone-500 dark:text-stone-400 mb-4 line-clamp-2">Persian pistachios embedded in creamy white chocolate with a touch of cardamom.</p>
+<div class="mt-auto space-y-3">
+<div class="flex items-center justify-between bg-stone-100 dark:bg-stone-800/50 rounded-lg p-1">
+<button class="w-8 h-8 flex items-center justify-center rounded hover:bg-white dark:hover:bg-stone-700 transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-xs font-bold px-4">1</span>
+<button class="w-8 h-8 flex items-center justify-center rounded hover:bg-white dark:hover:bg-stone-700 transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="w-full py-3 bg-primary text-white text-xs font-bold uppercase tracking-widest rounded-lg flex items-center justify-center gap-2 hover:bg-opacity-90 transition-all shadow-md group-hover:shadow-primary/20">
+<span class="material-symbols-outlined text-lg">shopping_bag</span>
+                            Add to Cart
+                        </button>
+</div>
+</div>
+</div>
+<!-- Repeat Card 1 for Grid Filling (Card 5) -->
+<div class="group flex flex-col">
+<div class="relative aspect-square overflow-hidden rounded-xl bg-stone-100 dark:bg-stone-800 mb-4">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-110" data-alt="Rose petal infused luxury chocolates" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDbEIyHrktadOFSatK8KJVy2MmZ-rfom4R6lVvWapGae6CAw8bdqheLAhLrSb66uAE7QC_eXbaY5uQC3IEmR1S1ZX_BaBPXwoocdXmI7SLxaDTcZWmZZEQQ28Qsv8YnMeYJQQRko5_9l6T8m1h6c5gJzrNXmMRMqU7r36FLV_jKGeZDxkJ9eCI3z4N239df85fPGPuV7_L8FDYnj6vf1QBxlScIB4rvJ3H1PGbbYWlm7K_veheHDGem78KlxLuhwvjyYZ5AIf7j4A')"></div>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-lg font-bold text-stone-900 dark:text-white group-hover:text-primary dark:group-hover:text-accent-gold transition-colors">Floral Rose Ganache</h3>
+<span class="font-display font-bold text-primary dark:text-accent-gold">$13.50</span>
+</div>
+<p class="text-sm text-stone-500 dark:text-stone-400 mb-4 line-clamp-2">Delicate Bulgarian rose water infusion in a 65% milk chocolate blend.</p>
+<div class="mt-auto space-y-3">
+<div class="flex items-center justify-between bg-stone-100 dark:bg-stone-800/50 rounded-lg p-1">
+<button class="w-8 h-8 flex items-center justify-center rounded hover:bg-white dark:hover:bg-stone-700 transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-xs font-bold px-4">1</span>
+<button class="w-8 h-8 flex items-center justify-center rounded hover:bg-white dark:hover:bg-stone-700 transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="w-full py-3 bg-primary text-white text-xs font-bold uppercase tracking-widest rounded-lg flex items-center justify-center gap-2 hover:bg-opacity-90 transition-all shadow-md group-hover:shadow-primary/20">
+<span class="material-symbols-outlined text-lg">shopping_bag</span>
+                            Add to Cart
+                        </button>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group flex flex-col">
+<div class="relative aspect-square overflow-hidden rounded-xl bg-stone-100 dark:bg-stone-800 mb-4">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-110" data-alt="Selection of dark and white chocolates" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD0CZ0jOJYxTwnqdRIfn3-ewBg31o-vJQbi78kCO7czJgZ-g_Hb8gVxBGGgj12w_zeoeoKJQBv_48CFB7G_WmgEXYe6nI915ArZbTr8THrD0kxPvbOD_CwNlYveH1poPVVUn_IzehW5hJ9xGDijLm1XJP6ossHeTc1SKZHJFE31RcMsbfm2NAVKGVlVdGjCLidBmFkMSKKyTKSfkyHzbye5IUsvfQoVc0Z42r3Opd22k24-6SuBZbvZZVGV_08-O5bwyPYilcDBYQ')"></div>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-lg font-bold text-stone-900 dark:text-white group-hover:text-primary dark:group-hover:text-accent-gold transition-colors">The Royal Sampler</h3>
+<span class="font-display font-bold text-primary dark:text-accent-gold">$85.00</span>
+</div>
+<p class="text-sm text-stone-500 dark:text-stone-400 mb-4 line-clamp-2">Our ultimate grand collection including 32 pieces of our finest historical recipes.</p>
+<div class="mt-auto space-y-3">
+<div class="flex items-center justify-between bg-stone-100 dark:bg-stone-800/50 rounded-lg p-1">
+<button class="w-8 h-8 flex items-center justify-center rounded hover:bg-white dark:hover:bg-stone-700 transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-xs font-bold px-4">1</span>
+<button class="w-8 h-8 flex items-center justify-center rounded hover:bg-white dark:hover:bg-stone-700 transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="w-full py-3 bg-primary text-white text-xs font-bold uppercase tracking-widest rounded-lg flex items-center justify-center gap-2 hover:bg-opacity-90 transition-all shadow-md group-hover:shadow-primary/20">
+<span class="material-symbols-outlined text-lg">shopping_bag</span>
+                            Add to Cart
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-center mt-20 gap-4">
+<button class="flex items-center justify-center w-10 h-10 rounded-full border border-stone-300 dark:border-stone-700 text-stone-400 cursor-not-allowed">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full bg-primary text-white font-bold text-sm">1</button>
+<button class="w-10 h-10 rounded-full border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-400 font-bold text-sm hover:bg-stone-100 dark:hover:bg-stone-800">2</button>
+<button class="w-10 h-10 rounded-full border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-400 font-bold text-sm hover:bg-stone-100 dark:hover:bg-stone-800">3</button>
+</div>
+<button class="flex items-center justify-center w-10 h-10 rounded-full border border-stone-300 dark:border-stone-700 text-stone-600 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-background-dark/80 border-t border-primary/10 dark:border-stone-800 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<!-- Brand Info -->
+<div class="col-span-1 md:col-span-2 lg:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-accent-gold text-2xl">diamond</span>
+<h1 class="text-xl font-bold tracking-tight text-primary dark:text-white">MAISON DU CHOCOLAT</h1>
+</div>
+<p class="text-stone-500 dark:text-stone-400 text-sm leading-relaxed mb-6">
+                        Crafting pure cocoa excellence in small batches since 1924. Our heritage is rooted in the art of the perfect temper and ethical sourcing.
+                    </p>
+<div class="flex gap-4">
+<a class="text-stone-400 hover:text-primary dark:hover:text-accent-gold" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-stone-400 hover:text-primary dark:hover:text-accent-gold" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+<a class="text-stone-400 hover:text-primary dark:hover:text-accent-gold" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<!-- Navigation Groups -->
+<div>
+<h4 class="text-sm font-bold uppercase tracking-widest text-primary dark:text-accent-gold mb-6">The Boutique</h4>
+<ul class="space-y-4 text-sm text-stone-500 dark:text-stone-400">
+<li><a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Gift Sets</a></li>
+<li><a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Seasonal Specials</a></li>
+<li><a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Bulk Orders</a></li>
+<li><a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Subscription Box</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-widest text-primary dark:text-accent-gold mb-6">Customer Care</h4>
+<ul class="space-y-4 text-sm text-stone-500 dark:text-stone-400">
+<li><a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Shipping Information</a></li>
+<li><a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Returns Policy</a></li>
+<li><a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Store Locator</a></li>
+</ul>
+</div>
+<!-- Newsletter -->
+<div>
+<h4 class="text-sm font-bold uppercase tracking-widest text-primary dark:text-accent-gold mb-6">Join the Circle</h4>
+<p class="text-xs text-stone-500 dark:text-stone-400 mb-4 italic">Receive updates on limited editions and tasting events.</p>
+<div class="flex flex-col gap-2">
+<input class="bg-white dark:bg-stone-800 border-none rounded-lg text-sm focus:ring-1 focus:ring-primary py-3 px-4" placeholder="Email Address" type="email"/>
+<button class="bg-primary text-white text-xs font-bold uppercase tracking-widest py-3 rounded-lg hover:bg-opacity-90">Subscribe</button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-stone-200 dark:border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[10px] text-stone-400 uppercase tracking-widest">© 2024 Maison Du Chocolat. All Rights Reserved.</p>
+<div class="flex items-center gap-6 text-[10px] text-stone-400 uppercase tracking-widest">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

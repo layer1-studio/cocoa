@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Artisan Chocolate Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3e2723",
+                        "background-light": "#f7f7f6",
+                        "background-dark": "#1c1716",
+                        "accent-gold": "#c5a059",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        h1, h2, h3, .font-display {
+            font-family: 'Noto Serif', serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #1c1716;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #3e2723;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-stone-800 dark:text-stone-200 antialiased overflow-hidden">
+<div class="flex h-screen w-full">
+<!-- Sidebar Navigation -->
+<aside class="w-64 flex-shrink-0 bg-primary border-r border-white/5 flex flex-col h-full z-40">
+<div class="p-8">
+<h1 class="text-white text-2xl font-bold tracking-tight flex items-center gap-2">
+<span class="material-symbols-outlined text-accent-gold">bakery_dining</span>
+                    Artisan
+                </h1>
+<p class="text-white/50 text-[10px] uppercase tracking-[0.2em] mt-1">Chocolate Atelier</p>
+</div>
+<nav class="flex-1 px-4 space-y-2 mt-4">
+<a class="flex items-center gap-3 px-4 py-3 text-white/60 hover:text-white hover:bg-white/5 rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-white bg-white/10 rounded-lg transition-colors border-l-2 border-accent-gold" href="#">
+<span class="material-symbols-outlined text-[20px] text-accent-gold">shopping_bag</span>
+<span class="text-sm font-medium">Orders</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-white/60 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+<span class="text-sm font-medium">Products</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-white/60 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">group</span>
+<span class="text-sm font-medium">Customers</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-white/60 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">bar_chart</span>
+<span class="text-sm font-medium">Analytics</span>
+</a>
+</nav>
+<div class="p-6 mt-auto border-t border-white/5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-accent-gold/20 flex items-center justify-center border border-accent-gold/30">
+<span class="material-symbols-outlined text-accent-gold">person</span>
+</div>
+<div>
+<p class="text-xs font-bold text-white">Julian Vasseur</p>
+<p class="text-[10px] text-white/40">Maître Chocolatier</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col h-full overflow-hidden relative">
+<!-- Top Header -->
+<header class="h-20 flex items-center justify-between px-8 bg-background-light/50 dark:bg-background-dark/50 backdrop-blur-md border-b border-stone-200 dark:border-stone-800">
+<div class="flex items-center gap-4">
+<h2 class="text-xl font-display font-bold">Order Management</h2>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-primary/10 text-primary dark:bg-accent-gold/10 dark:text-accent-gold uppercase tracking-wider">Live</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="material-symbols-outlined text-stone-400 group-hover:text-primary dark:group-hover:text-white cursor-pointer transition-colors">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-accent-gold rounded-full border-2 border-background-dark"></span>
+</div>
+<div class="h-8 w-px bg-stone-200 dark:border-stone-800"></div>
+<button class="flex items-center gap-2 bg-primary dark:bg-primary hover:brightness-110 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                        New Shipment
+                    </button>
+</div>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto custom-scrollbar p-8 space-y-8">
+<!-- Stats Overview -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 rounded-xl bg-white dark:bg-stone-900/50 border border-stone-200 dark:border-stone-800 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<p class="text-stone-400 text-xs font-medium uppercase tracking-widest">Total Revenue</p>
+<span class="material-symbols-outlined text-accent-gold">payments</span>
+</div>
+<p class="text-3xl font-display font-bold mb-1">$42,850.00</p>
+<div class="flex items-center gap-1 text-[10px] text-emerald-500 font-bold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>+12.4% FROM LAST MONTH</span>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-white dark:bg-stone-900/50 border border-stone-200 dark:border-stone-800 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<p class="text-stone-400 text-xs font-medium uppercase tracking-widest">Active Orders</p>
+<span class="material-symbols-outlined text-accent-gold">shopping_cart</span>
+</div>
+<p class="text-3xl font-display font-bold mb-1">1,284</p>
+<div class="flex items-center gap-1 text-[10px] text-emerald-500 font-bold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>+5.2% VS YESTERDAY</span>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-white dark:bg-stone-900/50 border border-stone-200 dark:border-stone-800 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<p class="text-stone-400 text-xs font-medium uppercase tracking-widest">Avg. Order Value</p>
+<span class="material-symbols-outlined text-accent-gold">auto_graph</span>
+</div>
+<p class="text-3xl font-display font-bold mb-1">$33.10</p>
+<div class="flex items-center gap-1 text-[10px] text-rose-500 font-bold">
+<span class="material-symbols-outlined text-[14px]">trending_down</span>
+<span>-1.2% VS LAST MONTH</span>
+</div>
+</div>
+</section>
+<!-- Management Table Section -->
+<section class="bg-white dark:bg-stone-900/50 border border-stone-200 dark:border-stone-800 rounded-xl overflow-hidden shadow-sm">
+<div class="p-6 border-b border-stone-200 dark:border-stone-800 flex flex-wrap gap-4 items-center justify-between">
+<div class="relative min-w-[320px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 text-[20px]">search</span>
+<input class="w-full bg-stone-100 dark:bg-stone-800 border-none rounded-lg pl-10 pr-4 py-2.5 text-sm focus:ring-1 focus:ring-accent-gold/50 transition-all" placeholder="Search orders, customers, IDs..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-stone-200 dark:border-stone-800 text-sm font-medium hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                                Filters
+                            </button>
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-stone-200 dark:border-stone-800 text-sm font-medium hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                                Export
+                            </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-stone-50 dark:bg-stone-800/30 text-[10px] uppercase tracking-[0.15em] text-stone-500 font-bold">
+<th class="px-6 py-4">Order ID</th>
+<th class="px-6 py-4">Customer</th>
+<th class="px-6 py-4">Date</th>
+<th class="px-6 py-4">Amount</th>
+<th class="px-6 py-4">Status</th>
+<th class="px-6 py-4 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+<tr class="group hover:bg-stone-50/50 dark:hover:bg-white/5 transition-colors cursor-pointer">
+<td class="px-6 py-5">
+<span class="text-sm font-bold text-accent-gold">#CH-9284</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary/20 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover opacity-80" data-alt="Profile photo of customer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCguUCnYvVpUAl3bhfdLZmmY887C4gWQSItrTYsZE0Zam43GxgDp0pw1PG9hZLtkdC4casAJ3A2z78V0Z-q1JOqOYEwsXCskMOn9_wJZqMOAC3B-AlUnQ2O5BO-YQZt0crYxsz2rzaY30gwXcvzI_PGNU6qdK5jCF3FRMAGlbXZ9AfejeuceFeZFysYUi1s2AvJ7GXrg2jvrKgOFSMSKuiOlSLwzFiJcZDTz0EospSJ7VGy9akumTozI75EQivbzcfpdO0bR1yyMA"/>
+</div>
+<div>
+<p class="text-sm font-semibold">Sebastian Roche</p>
+<p class="text-xs text-stone-500">s.roche@luxury.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-sm">Oct 24, 2023</td>
+<td class="px-6 py-5 text-sm font-bold">$142.50</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-amber-500/10 text-amber-500 border border-amber-500/20">
+<span class="w-1 h-1 rounded-full bg-amber-500"></span>
+                                            Pending
+                                        </span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="p-2 hover:bg-stone-200 dark:hover:bg-stone-700 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px] text-stone-400">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="group hover:bg-stone-50/50 dark:hover:bg-white/5 transition-colors cursor-pointer">
+<td class="px-6 py-5">
+<span class="text-sm font-bold text-accent-gold">#CH-9281</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary/20 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover opacity-80" data-alt="Profile photo of customer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2iso3maty_bQW4Tqi_frMWS1auWSiQ7VJ5R3eQgK2G0JkD0hsTjtrd2lfLPLz9DQAZwrL0_HInu-yNVmmtwsB46BJ3GXYeJ6fLzhmXaj-Oi4hw2uXtA5yS6n91-82XLKfd6OtcIy99D6tnBBO2cqw1pYYuM1GZT9Ukc7Wtq8P95Qrr-1wh2N53ntIGecLV2wYGxul4cw12YtlyIURaTIgIXhI-Xx1Z9MUqHHss8KXBkiIXoRfX3reHunKeTWvuZN2JO5NdiPgqw"/>
+</div>
+<div>
+<p class="text-sm font-semibold">Elara Vance</p>
+<p class="text-xs text-stone-500">elara.v@fashion.io</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-sm">Oct 23, 2023</td>
+<td class="px-6 py-5 text-sm font-bold">$84.00</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
+<span class="w-1 h-1 rounded-full bg-emerald-500"></span>
+                                            Delivered
+                                        </span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="p-2 hover:bg-stone-200 dark:hover:bg-stone-700 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px] text-stone-400">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="group hover:bg-stone-50/50 dark:hover:bg-white/5 transition-colors cursor-pointer border-l-4 border-accent-gold bg-stone-50 dark:bg-accent-gold/5">
+<td class="px-6 py-5">
+<span class="text-sm font-bold text-accent-gold">#CH-9279</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary/20 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover opacity-80" data-alt="Profile photo of customer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_jIzsD3h1kO935AOz298I7CttzqGsDlJn5jARo9bnD84Jd7VN9pBkWxNDKN1M0YMJO-Q1z7STwS-w8aXJghIQz22Y0v5DHUhu4izAJ4tvJeDkn8jhkfr4giUoPKkmJfVpSZZTAX0_hiwgxOq6gh6ayjmjUhAvvLXa51LW8fL-S6BCxnHJ61el5DA0e_P7s8FLjq0aZmptNBvOZBMAXmjtyM07cXykiKrl3AzpBbsO1BI96fH1n_78A-JElL0DrylZUHxLS39otQ"/>
+</div>
+<div>
+<p class="text-sm font-semibold">Isabella Chen</p>
+<p class="text-xs text-stone-500">chen.i@design.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-sm">Oct 23, 2023</td>
+<td class="px-6 py-5 text-sm font-bold">$210.30</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-blue-500/10 text-blue-500 border border-blue-500/20">
+<span class="w-1 h-1 rounded-full bg-blue-500"></span>
+                                            Shipped
+                                        </span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="p-2 hover:bg-stone-200 dark:hover:bg-stone-700 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px] text-stone-400">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="group hover:bg-stone-50/50 dark:hover:bg-white/5 transition-colors cursor-pointer">
+<td class="px-6 py-5">
+<span class="text-sm font-bold text-accent-gold">#CH-9275</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary/20 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover opacity-80" data-alt="Profile photo of customer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0-aGFYexpKVDBEY5Pz8gKsG64VYJNHqTstjm3YSGcFRpov4mUJ7XMieQ29aAdD_fj0eVSZWDtdWKWKq-4oeQa1AjDR5jaXUivHqaorF1snTD08VJspiLhFhbFKEwF-mFjvekuIYBt3HbtiQJB0cdsKxA-_mkwT0f4Bssc3PX9nE5LI-luwoa_BLGkkZ-qsgWF2l8BFzsfu1t1BmRUiWPJG_4b0X1xga3lULbBwORDs6H1eaE2G1bh2qDdKhzryQuo2aGgmZXsgg"/>
+</div>
+<div>
+<p class="text-sm font-semibold">Marcus Thorne</p>
+<p class="text-xs text-stone-500">m.thorne@arch.co</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-sm">Oct 22, 2023</td>
+<td class="px-6 py-5 text-sm font-bold">$45.90</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
+<span class="w-1 h-1 rounded-full bg-emerald-500"></span>
+                                            Delivered
+                                        </span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="p-2 hover:bg-stone-200 dark:hover:bg-stone-700 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px] text-stone-400">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-6 border-t border-stone-200 dark:border-stone-800 flex items-center justify-between">
+<p class="text-xs text-stone-500 font-medium tracking-wide uppercase">Showing 1-10 of 1,284 results</p>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-stone-200 dark:border-stone-800 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold text-sm">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-stone-200 dark:border-stone-800 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors font-bold text-sm">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-stone-200 dark:border-stone-800 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+<!-- Detail Modal Overlay (Active Example) -->
+<div class="absolute inset-0 z-50 flex items-center justify-center bg-background-dark/80 backdrop-blur-sm p-4">
+<div class="bg-white dark:bg-background-dark w-full max-w-2xl rounded-xl shadow-2xl border border-stone-200 dark:border-stone-800 overflow-hidden flex flex-col max-h-[90vh]">
+<!-- Modal Header -->
+<div class="p-6 border-b border-stone-200 dark:border-stone-800 flex items-center justify-between">
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-accent-gold mb-1">Order Details</p>
+<h3 class="text-xl font-display font-bold">#CH-9279 — Isabella Chen</h3>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="flex-1 overflow-y-auto custom-scrollbar p-8">
+<div class="grid grid-cols-2 gap-8 mb-8">
+<div>
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-stone-500 mb-3">Shipping Address</h4>
+<p class="text-sm leading-relaxed text-stone-700 dark:text-stone-300">
+                                    Isabella Chen<br/>
+                                    742 Lumière Boulevard, Apt 4C<br/>
+                                    Saint-Germain-des-Prés, Paris<br/>
+                                    75006, France
+                                </p>
+</div>
+<div>
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-stone-500 mb-3">Status Configuration</h4>
+<div class="relative">
+<select class="w-full bg-stone-100 dark:bg-stone-800 border-none rounded-lg py-2.5 pl-4 pr-10 text-sm focus:ring-1 focus:ring-accent-gold/50 appearance-none font-semibold">
+<option value="pending">Pending</option>
+<option value="processing">Processing</option>
+<option selected="" value="shipped">Shipped</option>
+<option value="delivered">Delivered</option>
+<option value="cancelled">Cancelled</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-stone-400">expand_more</span>
+</div>
+<p class="text-[10px] text-stone-500 mt-2 font-medium italic">Notification will be sent to customer upon update.</p>
+</div>
+</div>
+<div class="mb-8">
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-stone-500 mb-4">Itemized Order</h4>
+<div class="space-y-4">
+<div class="flex items-center gap-4 group">
+<div class="w-16 h-16 rounded-lg bg-stone-100 dark:bg-stone-800 flex items-center justify-center overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Handcrafted dark chocolate truffles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfXg2ZrIDx9xD9JiybccgatvcoHCZ7wrXZChrtKkxVKr-h6nfr2mj9vHjKYnotAwB5eTyNL84XEJ-uQmWae8cypyP1nf70BBaw-fr43UxslE-L3uWJUWdrNVWDvDDkqJywxTt-w3tEzX0ZeiJLtN6nikYQ1Pgh1njRgNGM2D1x2Gx7ttmRl2RodkFm4UCtt2SW-HdMHWbweXkNC2bjULwztvwkLZZRfGntogrDerJdPZHrwGczxNCUC5mjOFmDTJSvCIPVrZGFgA"/>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold">Midnight Truffle Collection (16 pcs)</p>
+<p class="text-xs text-stone-500">Origin: Madagascar 72% Dark</p>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold">$64.00</p>
+<p class="text-xs text-stone-500">Qty: 2</p>
+</div>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-16 h-16 rounded-lg bg-stone-100 dark:bg-stone-800 flex items-center justify-center overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Artisan gold-leaf pralines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_rTWD1-FSQ_9PH5LmO29Aai3bMY-KAovRspAidVuv9q8UvWTpvlpzicC-4e3GjKlISjoAag8PRecXDHpb1jXUGGjDSRcZBhIHu1teLs84ykuR_Pk2c5dlB3_YSWbvlOD8pgSRMI_7f-yCkeW901qGEenOiv5Irj_TxSrf-Fov1eoqB2O6Y625sCL8euYBE7mrIimpgDMOTeXWXfu9e6QfumlgKOqw7vPSGlqunqD3J6qwlG1hRcjeCzeQdGFQbcXes4IUKkRNOw"/>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold">Gold-Leaf Sea Salt Pralines</p>
+<p class="text-xs text-stone-500">Limited Winter Edition</p>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold">$82.30</p>
+<p class="text-xs text-stone-500">Qty: 1</p>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-stone-200 dark:border-stone-800 pt-6 space-y-2">
+<div class="flex justify-between text-sm">
+<span class="text-stone-500">Subtotal</span>
+<span class="font-medium">$146.30</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-stone-500">Priority Shipping</span>
+<span class="font-medium">$15.00</span>
+</div>
+<div class="flex justify-between text-lg pt-2 border-t border-stone-100 dark:border-stone-800/50 mt-2">
+<span class="font-display font-bold">Total Amount</span>
+<span class="font-display font-bold text-accent-gold">$210.30</span>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="p-6 border-t border-stone-200 dark:border-stone-800 flex justify-end gap-3 bg-stone-50 dark:bg-stone-900/40">
+<button class="px-6 py-2.5 rounded-lg border border-stone-200 dark:border-stone-800 text-sm font-medium hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+                            Print Invoice
+                        </button>
+<button class="px-6 py-2.5 rounded-lg bg-primary text-white text-sm font-medium hover:brightness-110 shadow-lg shadow-primary/20 transition-all">
+                            Save Changes
+                        </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
