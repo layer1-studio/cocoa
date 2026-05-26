@@ -37,6 +37,7 @@ function App() {
                         <Route path="/privacy" element={<PrivacyPolicy />} />
                         <Route path="/terms" element={<TermsOfService />} />
                         <Route path="/shipping" element={<DeliveryPolicy />} />
+                        <Route path="/order-confirmation" element={<OrderConfirmationPage />} />
                         <Route path="/scan" element={<DeliveryPartnerPortal />} />
                     </Routes>
                 </main>

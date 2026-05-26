@@ -1,35 +1,19 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, Search, CheckCircle2, XCircle, Loader2 } from 'lucide-react';
+import { checkDeliveryEligibility } from '../../utils/deliveryEligibility';
 
 const DeliveryChecker = () => {
     const [address, setAddress] = useState('');
     const [status, setStatus] = useState('idle'); // idle, checking, eligible, ineligible
 
-    // Mock Delivery Logic (Simulating Sri Lanka Geocoding)
-    const allowedAreas = [
-        'colombo', 'rajagiriya', 'nugegoda', 'battaramulla',
-        'mount lavinia', 'dehiwala', 'ethul kotte', 'kotte',
-        'borella', 'cinnamon gardens', 'kollupitiya', 'bambalapitiya'
-    ];
-
     const checkDelivery = (e) => {
         e.preventDefault();
         if (!address.trim()) return;
-
         setStatus('checking');
-
-        // Simulating API lookup/calculation
         setTimeout(() => {
-            const isEligible = allowedAreas.some(area =>
-                address.toLowerCase().includes(area)
-            );
-
-            if (isEligible) {
-                setStatus('eligible');
-            } else {
-                setStatus('ineligible');
-            }
+            const { eligible } = checkDeliveryEligibility(address);
+            setStatus(eligible ? 'eligible' : 'ineligible');
         }, 1500);
     };
 

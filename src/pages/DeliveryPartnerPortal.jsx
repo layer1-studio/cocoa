@@ -26,16 +26,11 @@ const DeliveryPartnerPortal = () => {
         setTimeout(() => {
             const result = updateStatusByCode(code.toUpperCase(), 'Out for Delivery');
             if (result) {
-                // Check if it was already delivered (OrderContext logic returns the order object)
-                if (result.status === 'Delivered') {
-                    setStatus('duplicate');
-                } else {
-                    setStatus('success');
-                }
-
+                const nextStatus = result.status === 'Delivered' ? 'duplicate' : 'success';
+                setStatus(nextStatus);
                 setTimeout(() => {
                     setStatus('idle');
-                    if (status !== 'duplicate') setCode('');
+                    if (nextStatus !== 'duplicate') setCode('');
                 }, 3000);
             } else {
                 setStatus('error');

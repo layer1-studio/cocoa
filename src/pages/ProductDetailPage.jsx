@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Minus, Plus, ShoppingBag, Calendar, Clock, MessageSquare, ChevronRight } from 'lucide-react';
@@ -9,7 +9,7 @@ import { useOrders } from '../context/OrderContext';
 const ProductDetailPage = () => {
     const { id } = useParams();
     const { products } = useProducts();
-    const { addToCart } = useCart();
+    const { addToCart, selectedDeliveryDate, setSelectedDeliveryDate, selectedDeliverySlot, setSelectedDeliverySlot } = useCart();
     const { isSlotAvailable } = useOrders();
 
     const product = products.find(p => p.id === parseInt(id)) || products[0];
@@ -23,9 +23,6 @@ const ProductDetailPage = () => {
         return date.toISOString().split('T')[0];
     };
 
-    const [deliveryDate, setDeliveryDate] = useState(getMinDate());
-    const [deliverySlot, setDeliverySlot] = useState('Morning (9AM - 12PM)');
-
     const timeSlots = [
         "Morning (9AM - 12PM)",
         "Afternoon (1PM - 4PM)",
@@ -33,23 +30,17 @@ const ProductDetailPage = () => {
     ];
 
     const handleAddToCart = () => {
-        if (!isSlotAvailable(deliveryDate, deliverySlot)) {
+        if (!isSlotAvailable(selectedDeliveryDate, selectedDeliverySlot)) {
             alert("Sorry, this delivery slot has just been fully booked. Please select another time.");
             return;
         }
 
-        addToCart(product, {
-            quantity,
-            personalMessage,
-            deliveryDate,
-            deliverySlot
-        });
+        addToCart(product, { quantity, personalMessage });
         alert(`${product.name} added to collection!`);
     };
 
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            {/* Breadcrumb */}
             <nav className="flex items-center text-xs uppercase tracking-[0.2em] text-accent-cream/40 mb-12">
                 <Link to="/shop" className="hover:text-accent-gold transition-colors">Shop</Link>
                 <ChevronRight size={12} className="mx-3" />
@@ -57,32 +48,23 @@ const ProductDetailPage = () => {
             </nav>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                {/* Product Image */}
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl bg-stone-900 border border-white/5"
                 >
-                    <img
-                        src={product.img}
-                        alt={product.name}
-                        className="w-full h-full object-cover"
-                    />
+                    <img src={product.img} alt={product.name} className="w-full h-full object-cover" />
                 </motion.div>
 
-                {/* Product Details & Selection */}
                 <div className="flex flex-col space-y-10">
                     <div>
                         <h1 className="text-4xl md:text-5xl font-bold font-display text-accent-cream mb-4">{product.name}</h1>
                         <p className="text-2xl font-display text-accent-gold font-bold">Rs. {product.price.toLocaleString()}</p>
                     </div>
 
-                    <p className="text-accent-cream/70 text-lg leading-relaxed italic">
-                        "{product.desc}"
-                    </p>
+                    <p className="text-accent-cream/70 text-lg leading-relaxed italic">"{product.desc}"</p>
 
                     <div className="space-y-8">
-                        {/* Quantity */}
                         <div className="flex items-center gap-6">
                             <span className="text-xs uppercase tracking-widest text-accent-cream/40 font-bold">Quantity</span>
                             <div className="flex items-center bg-stone-900 rounded-xl p-1 border border-white/5">
@@ -102,7 +84,6 @@ const ProductDetailPage = () => {
                             </div>
                         </div>
 
-                        {/* Personalized Message */}
                         <div className="space-y-3">
                             <div className="flex items-center gap-2 text-accent-gold">
                                 <MessageSquare size={16} />
@@ -116,7 +97,6 @@ const ProductDetailPage = () => {
                             />
                         </div>
 
-                        {/* Delivery Schedule */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-3">
                                 <div className="flex items-center gap-2 text-accent-gold">
@@ -126,8 +106,8 @@ const ProductDetailPage = () => {
                                 <input
                                     type="date"
                                     min={getMinDate()}
-                                    value={deliveryDate}
-                                    onChange={(e) => setDeliveryDate(e.target.value)}
+                                    value={selectedDeliveryDate}
+                                    onChange={(e) => setSelectedDeliveryDate(e.target.value)}
                                     className="w-full bg-stone-900 border border-white/5 rounded-xl p-3 text-sm outline-none focus:ring-1 focus:ring-accent-gold transition-all color-scheme-dark"
                                 />
                             </div>
@@ -137,12 +117,12 @@ const ProductDetailPage = () => {
                                     <span className="text-xs uppercase tracking-widest font-bold">Time Slot</span>
                                 </div>
                                 <select
-                                    value={deliverySlot}
-                                    onChange={(e) => setDeliverySlot(e.target.value)}
+                                    value={selectedDeliverySlot}
+                                    onChange={(e) => setSelectedDeliverySlot(e.target.value)}
                                     className="w-full bg-stone-900 border border-white/5 rounded-xl p-3 text-sm outline-none focus:ring-1 focus:ring-accent-gold transition-all appearance-none"
                                 >
                                     {timeSlots.map(slot => {
-                                        const available = isSlotAvailable(deliveryDate, slot);
+                                        const available = isSlotAvailable(selectedDeliveryDate, slot);
                                         return (
                                             <option key={slot} value={slot} disabled={!available}>
                                                 {slot} {!available && "(Full)"}
@@ -174,7 +154,6 @@ const ProductDetailPage = () => {
                 </div>
             </div>
 
-            {/* Recommended Section (Simple) */}
             <section className="mt-32 pt-20 border-t border-white/5">
                 <h2 className="text-3xl font-bold font-display text-accent-cream mb-12">Perfect Pairings</h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">

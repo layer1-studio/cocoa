@@ -4,8 +4,16 @@ const CartContext = createContext();
 
 export const useCart = () => useContext(CartContext);
 
+const getMinDate = () => {
+    const d = new Date();
+    d.setDate(d.getDate() + 3);
+    return d.toISOString().split('T')[0];
+};
+
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
+    const [selectedDeliveryDate, setSelectedDeliveryDate] = useState(getMinDate);
+    const [selectedDeliverySlot, setSelectedDeliverySlot] = useState('Morning (9AM - 12PM)');
 
     const addToCart = (product, settings) => {
         setCart(prev => [...prev, { ...product, ...settings, cartId: Date.now() }]);
@@ -37,7 +45,11 @@ export const CartProvider = ({ children }) => {
             clearCart,
             subtotal,
             deliveryFee,
-            total
+            total,
+            selectedDeliveryDate,
+            setSelectedDeliveryDate,
+            selectedDeliverySlot,
+            setSelectedDeliverySlot
         }}>
             {children}
         </CartContext.Provider>
